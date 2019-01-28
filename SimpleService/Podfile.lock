@@ -1,0 +1,58 @@
+PODS:
+  - Alamofire (4.7.3)
+  - AutoEquatable (2.2)
+  - BrightFutures (7.0.0):
+    - Result (~> 4.0.0)
+  - KIF (3.7.4):
+    - KIF/Core (= 3.7.4)
+  - KIF-Quick (1.1.0):
+    - KIF (~> 3.0)
+    - Quick (~> 1.0)
+  - KIF/Core (3.7.4)
+  - Nimble (7.3.1)
+  - Quick (1.3.2)
+  - Result (4.0.0)
+  - Spry (3.2.3)
+  - "Spry+Nimble (3.2.3)":
+    - Nimble (> 7.0.0)
+    - Spry (= 3.2.3)
+
+DEPENDENCIES:
+  - Alamofire
+  - AutoEquatable
+  - BrightFutures
+  - KIF
+  - KIF-Quick
+  - Nimble
+  - Quick
+  - Spry
+  - "Spry+Nimble"
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - AutoEquatable
+    - BrightFutures
+    - KIF
+    - KIF-Quick
+    - Nimble
+    - Quick
+    - Result
+    - Spry
+    - "Spry+Nimble"
+
+SPEC CHECKSUMS:
+  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  AutoEquatable: 9ac3fc833cccbf7e355a241b974dbd7dbb54bce7
+  BrightFutures: 7d7436e937dfc83d814c11920f157fc2a53f5bd5
+  KIF: f3d01c109ee9d1cfe6b0f2bb2aa278e807e971e2
+  KIF-Quick: da968bbfad615fd96c0d5eb4d8fd484ecdc26814
+  Nimble: 04f732da099ea4d153122aec8c2a88fd0c7219ae
+  Quick: 2623cb30d7a7f41ca62f684f679586558f483d46
+  Result: 7645bb3f50c2ce726dd0ff2fa7b6f42bbe6c3713
+  Spry: 216a7f6566e6c7a0392f3f4b4e804e71d58e1835
+  "Spry+Nimble": 65b76e7d2dbe2d9166109ff44d8eea44a0bea94e
+
+PODFILE CHECKSUM: 1e5edad9836cb106505954a73e726cb7c300d88d
+
+COCOAPODS: 1.5.3

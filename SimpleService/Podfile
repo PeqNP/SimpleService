@@ -1,0 +1,19 @@
+platform :ios, '11.0'
+
+use_frameworks!
+
+target 'SimpleService' do
+    pod 'Alamofire'
+    pod 'BrightFutures'
+end
+
+target 'SimpleServiceUITests' do
+    pod 'BrightFutures'
+    pod 'Quick'
+    pod 'Nimble'
+    pod 'KIF'
+    pod 'KIF-Quick'
+    pod 'Spry'
+    pod 'Spry+Nimble'
+    pod 'AutoEquatable'
+end
