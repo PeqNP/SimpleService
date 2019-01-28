@@ -1,10 +1,10 @@
-//
-//  AppDelegate.swift
-//  SimpleService
-//
-//  Created by Eric Chamberlain on 1/28/19.
-//  Copyright © 2019 Upstart Illustration LLC. All rights reserved.
-//
+/**
+ Provides definition of a request made to a service.
+ 
+ License: MIT
+ 
+ Copyright © 2018 Upstart Illustration LLC. All rights reserved.
+ */
 
 import UIKit
 

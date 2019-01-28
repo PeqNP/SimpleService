@@ -13,6 +13,20 @@
 		0754B62A21FFB9D200E2DECD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0754B62921FFB9D200E2DECD /* Assets.xcassets */; };
 		0754B62D21FFB9D200E2DECD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0754B62B21FFB9D200E2DECD /* LaunchScreen.storyboard */; };
 		0754B63821FFB9D200E2DECD /* SimpleServiceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0754B63721FFB9D200E2DECD /* SimpleServiceUITests.swift */; };
+		0754B64421FFBAD700E2DECD /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0754B64321FFBAD700E2DECD /* Environment.swift */; };
+		0754B64A21FFBB0F00E2DECD /* ServiceRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0754B64521FFBB0F00E2DECD /* ServiceRequester.swift */; };
+		0754B64B21FFBB0F00E2DECD /* ServiceEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0754B64621FFBB0F00E2DECD /* ServiceEndpoint.swift */; };
+		0754B64C21FFBB0F00E2DECD /* ServicePlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0754B64721FFBB0F00E2DECD /* ServicePlugin.swift */; };
+		0754B64D21FFBB0F00E2DECD /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0754B64821FFBB0F00E2DECD /* Service.swift */; };
+		0754B64E21FFBB0F00E2DECD /* URLRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0754B64921FFBB0F00E2DECD /* URLRequestFactory.swift */; };
+		0754B65321FFBB6100E2DECD /* ProjectsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0754B65021FFBB6100E2DECD /* ProjectsEndpoint.swift */; };
+		0754B65421FFBB6100E2DECD /* ProjectService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0754B65121FFBB6100E2DECD /* ProjectService.swift */; };
+		0754B65521FFBB6100E2DECD /* ProjectResponse+Backit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0754B65221FFBB6100E2DECD /* ProjectResponse+Backit.swift */; };
+		0754B65821FFBC0B00E2DECD /* ProjectResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0754B65721FFBC0B00E2DECD /* ProjectResponse.swift */; };
+		0754B65A21FFBC2700E2DECD /* ProjectSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0754B65921FFBC2700E2DECD /* ProjectSource.swift */; };
+		0754B65C21FFBCA800E2DECD /* AlamofireServiceRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0754B65B21FFBCA800E2DECD /* AlamofireServiceRequester.swift */; };
+		CAAA56E7F4467C973120D59D /* Pods_SimpleService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 936DEC3385F201FAE731D879 /* Pods_SimpleService.framework */; };
+		EF622BA1BD8F98AEE5B4981C /* Pods_SimpleServiceUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 186191DD423C46806667624F /* Pods_SimpleServiceUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +50,24 @@
 		0754B63321FFB9D200E2DECD /* SimpleServiceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleServiceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0754B63721FFB9D200E2DECD /* SimpleServiceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleServiceUITests.swift; sourceTree = "<group>"; };
 		0754B63921FFB9D200E2DECD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0754B64321FFBAD700E2DECD /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		0754B64521FFBB0F00E2DECD /* ServiceRequester.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceRequester.swift; sourceTree = "<group>"; };
+		0754B64621FFBB0F00E2DECD /* ServiceEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceEndpoint.swift; sourceTree = "<group>"; };
+		0754B64721FFBB0F00E2DECD /* ServicePlugin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicePlugin.swift; sourceTree = "<group>"; };
+		0754B64821FFBB0F00E2DECD /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		0754B64921FFBB0F00E2DECD /* URLRequestFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLRequestFactory.swift; sourceTree = "<group>"; };
+		0754B65021FFBB6100E2DECD /* ProjectsEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectsEndpoint.swift; sourceTree = "<group>"; };
+		0754B65121FFBB6100E2DECD /* ProjectService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectService.swift; sourceTree = "<group>"; };
+		0754B65221FFBB6100E2DECD /* ProjectResponse+Backit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ProjectResponse+Backit.swift"; sourceTree = "<group>"; };
+		0754B65721FFBC0B00E2DECD /* ProjectResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectResponse.swift; sourceTree = "<group>"; };
+		0754B65921FFBC2700E2DECD /* ProjectSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSource.swift; sourceTree = "<group>"; };
+		0754B65B21FFBCA800E2DECD /* AlamofireServiceRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireServiceRequester.swift; sourceTree = "<group>"; };
+		0BB66F61E3F61523B0B14478 /* Pods-SimpleService.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleService.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleService/Pods-SimpleService.release.xcconfig"; sourceTree = "<group>"; };
+		186191DD423C46806667624F /* Pods_SimpleServiceUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleServiceUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BEB57ECFDCCCEFF6FFEE7C6 /* Pods-SimpleServiceUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleServiceUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleServiceUITests/Pods-SimpleServiceUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		92EFC9AEE0EFBA3D2BA7580C /* Pods-SimpleService.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleService.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleService/Pods-SimpleService.debug.xcconfig"; sourceTree = "<group>"; };
+		936DEC3385F201FAE731D879 /* Pods_SimpleService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7B4C4811981AF69620EBDB2 /* Pods-SimpleServiceUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleServiceUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleServiceUITests/Pods-SimpleServiceUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAAA56E7F4467C973120D59D /* Pods_SimpleService.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF622BA1BD8F98AEE5B4981C /* Pods_SimpleServiceUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +96,8 @@
 				0754B62121FFB9CA00E2DECD /* SimpleService */,
 				0754B63621FFB9D200E2DECD /* SimpleServiceUITests */,
 				0754B62021FFB9CA00E2DECD /* Products */,
+				E93D942F8DC23DC19D125658 /* Pods */,
+				D0BA5BBAC5EE5326357A338C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,12 +113,16 @@
 		0754B62121FFB9CA00E2DECD /* SimpleService */ = {
 			isa = PBXGroup;
 			children = (
+				0754B65621FFBBFD00E2DECD /* Model */,
+				0754B64F21FFBB2700E2DECD /* MyService */,
+				0754B64221FFBACC00E2DECD /* Service */,
 				0754B62221FFB9CA00E2DECD /* AppDelegate.swift */,
 				0754B62421FFB9CA00E2DECD /* ViewController.swift */,
 				0754B62621FFB9CA00E2DECD /* Main.storyboard */,
 				0754B62921FFB9D200E2DECD /* Assets.xcassets */,
 				0754B62B21FFB9D200E2DECD /* LaunchScreen.storyboard */,
 				0754B62E21FFB9D200E2DECD /* Info.plist */,
+				0754B65B21FFBCA800E2DECD /* AlamofireServiceRequester.swift */,
 			);
 			path = SimpleService;
 			sourceTree = "<group>";
@@ -96,6 +136,58 @@
 			path = SimpleServiceUITests;
 			sourceTree = "<group>";
 		};
+		0754B64221FFBACC00E2DECD /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				0754B64321FFBAD700E2DECD /* Environment.swift */,
+				0754B64821FFBB0F00E2DECD /* Service.swift */,
+				0754B64621FFBB0F00E2DECD /* ServiceEndpoint.swift */,
+				0754B64721FFBB0F00E2DECD /* ServicePlugin.swift */,
+				0754B64521FFBB0F00E2DECD /* ServiceRequester.swift */,
+				0754B64921FFBB0F00E2DECD /* URLRequestFactory.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		0754B64F21FFBB2700E2DECD /* MyService */ = {
+			isa = PBXGroup;
+			children = (
+				0754B65221FFBB6100E2DECD /* ProjectResponse+Backit.swift */,
+				0754B65021FFBB6100E2DECD /* ProjectsEndpoint.swift */,
+				0754B65121FFBB6100E2DECD /* ProjectService.swift */,
+			);
+			path = MyService;
+			sourceTree = "<group>";
+		};
+		0754B65621FFBBFD00E2DECD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0754B65721FFBC0B00E2DECD /* ProjectResponse.swift */,
+				0754B65921FFBC2700E2DECD /* ProjectSource.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D0BA5BBAC5EE5326357A338C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				936DEC3385F201FAE731D879 /* Pods_SimpleService.framework */,
+				186191DD423C46806667624F /* Pods_SimpleServiceUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E93D942F8DC23DC19D125658 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				92EFC9AEE0EFBA3D2BA7580C /* Pods-SimpleService.debug.xcconfig */,
+				0BB66F61E3F61523B0B14478 /* Pods-SimpleService.release.xcconfig */,
+				1BEB57ECFDCCCEFF6FFEE7C6 /* Pods-SimpleServiceUITests.debug.xcconfig */,
+				B7B4C4811981AF69620EBDB2 /* Pods-SimpleServiceUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,9 +195,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0754B63C21FFB9D200E2DECD /* Build configuration list for PBXNativeTarget "SimpleService" */;
 			buildPhases = (
+				0D2F07AB4E64F1C8F2C2FC51 /* [CP] Check Pods Manifest.lock */,
 				0754B61B21FFB9CA00E2DECD /* Sources */,
 				0754B61C21FFB9CA00E2DECD /* Frameworks */,
 				0754B61D21FFB9CA00E2DECD /* Resources */,
+				CD0DCD837B3BB59D9B9F1EAA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -120,9 +214,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0754B63F21FFB9D200E2DECD /* Build configuration list for PBXNativeTarget "SimpleServiceUITests" */;
 			buildPhases = (
+				65C51E520E7120A475C7ABAE /* [CP] Check Pods Manifest.lock */,
 				0754B62F21FFB9D200E2DECD /* Sources */,
 				0754B63021FFB9D200E2DECD /* Frameworks */,
 				0754B63121FFB9D200E2DECD /* Resources */,
+				DD8A2CB4EE0770F5B17A23F2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -192,13 +288,120 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0D2F07AB4E64F1C8F2C2FC51 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SimpleService-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		65C51E520E7120A475C7ABAE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SimpleServiceUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CD0DCD837B3BB59D9B9F1EAA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SimpleService/Pods-SimpleService-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/BrightFutures/BrightFutures.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BrightFutures.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SimpleService/Pods-SimpleService-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DD8A2CB4EE0770F5B17A23F2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SimpleServiceUITests/Pods-SimpleServiceUITests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BrightFutures/BrightFutures.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/AutoEquatable/AutoEquatable.framework",
+				"${BUILT_PRODUCTS_DIR}/KIF/KIF.framework",
+				"${BUILT_PRODUCTS_DIR}/KIF-Quick/KIF_Quick.framework",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
+				"${BUILT_PRODUCTS_DIR}/Spry/Spry.framework",
+				"${BUILT_PRODUCTS_DIR}/Spry+Nimble/Spry_Nimble.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BrightFutures.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AutoEquatable.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KIF.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KIF_Quick.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Spry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Spry_Nimble.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SimpleServiceUITests/Pods-SimpleServiceUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0754B61B21FFB9CA00E2DECD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0754B64C21FFBB0F00E2DECD /* ServicePlugin.swift in Sources */,
+				0754B65521FFBB6100E2DECD /* ProjectResponse+Backit.swift in Sources */,
+				0754B65821FFBC0B00E2DECD /* ProjectResponse.swift in Sources */,
+				0754B65C21FFBCA800E2DECD /* AlamofireServiceRequester.swift in Sources */,
+				0754B64D21FFBB0F00E2DECD /* Service.swift in Sources */,
 				0754B62521FFB9CA00E2DECD /* ViewController.swift in Sources */,
+				0754B64421FFBAD700E2DECD /* Environment.swift in Sources */,
+				0754B64B21FFBB0F00E2DECD /* ServiceEndpoint.swift in Sources */,
+				0754B65421FFBB6100E2DECD /* ProjectService.swift in Sources */,
+				0754B64A21FFBB0F00E2DECD /* ServiceRequester.swift in Sources */,
+				0754B64E21FFBB0F00E2DECD /* URLRequestFactory.swift in Sources */,
+				0754B65321FFBB6100E2DECD /* ProjectsEndpoint.swift in Sources */,
 				0754B62321FFB9CA00E2DECD /* AppDelegate.swift in Sources */,
+				0754B65A21FFBC2700E2DECD /* ProjectSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +561,7 @@
 		};
 		0754B63D21FFB9D200E2DECD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92EFC9AEE0EFBA3D2BA7580C /* Pods-SimpleService.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -376,6 +580,7 @@
 		};
 		0754B63E21FFB9D200E2DECD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0BB66F61E3F61523B0B14478 /* Pods-SimpleService.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -394,8 +599,8 @@
 		};
 		0754B64021FFB9D200E2DECD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BEB57ECFDCCCEFF6FFEE7C6 /* Pods-SimpleServiceUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DSZ2DNDVRK;
 				INFOPLIST_FILE = SimpleServiceUITests/Info.plist;
@@ -414,8 +619,8 @@
 		};
 		0754B64121FFB9D200E2DECD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7B4C4811981AF69620EBDB2 /* Pods-SimpleServiceUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DSZ2DNDVRK;
 				INFOPLIST_FILE = SimpleServiceUITests/Info.plist;
