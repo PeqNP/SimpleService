@@ -15,6 +15,14 @@ enum ServiceRequestType {
 
 typealias Endpoints = [Environment: String]
 
+enum HTTPBodyEncodingStrategy {
+    /// Encode data as JSON object
+    case json
+    
+    /// Encode data as k1=v1[&k2=v2...]
+    case keyValue
+}
+
 /**
  Notes:
  `Header`, `PathParameter`, `GetParameter`, and `PostParameter` must be enums with a single associated value for every case.
@@ -32,6 +40,7 @@ protocol ServiceEndpoint {
     var pathParameters: [PathParameter]? { get }
     var queryParameters: [QueryParameter]? { get }
     var postParameters: [PostParameter]? { get }
+    var httpBodyEncodingStrategy: HTTPBodyEncodingStrategy { get }
 }
 
 /// Default implementations
@@ -47,5 +56,8 @@ extension ServiceEndpoint {
     }
     var postParameters: [PostParameter]? {
         return nil
+    }
+    var httpBodyEncodingStrategy: HTTPBodyEncodingStrategy {
+        return .json
     }
 }
