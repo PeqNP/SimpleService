@@ -35,6 +35,7 @@ protocol ServiceEndpoint {
     associatedtype PostParameter
     
     var type: ServiceRequestType { get }
+    var plugins: [ServicePluginKey]? { get }
     var endpoints: Endpoints { get }
     var headers: [Header]? { get }
     var pathParameters: [PathParameter]? { get }
@@ -45,6 +46,9 @@ protocol ServiceEndpoint {
 
 /// Default implementations
 extension ServiceEndpoint {
+    var plugins: [ServicePluginKey]? {
+        return nil
+    }
     var headers: [Header]? {
         return nil
     }

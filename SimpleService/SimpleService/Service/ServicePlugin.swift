@@ -9,6 +9,8 @@
 import Foundation
 
 protocol ServicePlugin {
+    var key: ServicePluginKey { get }
+    
     func willSendRequest(_ request: URLRequest) -> URLRequest
     func didSendRequest(_ request: URLRequest)
     func didReceiveResponse(_ response: ServiceResult) -> ServiceResult

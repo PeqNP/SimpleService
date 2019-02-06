@@ -10,22 +10,22 @@ import Foundation
 
 class URLRequestFactory {
     
-    func make<T: ServiceEndpoint>(from request: T, in environment: Environment) throws -> URLRequest {
-        guard let urlString = request.endpoints[environment] else {
+    func make<T: ServiceEndpoint>(from endpoint: T, in environment: Environment) throws -> URLRequest {
+        guard let urlString = endpoint.endpoints[environment] else {
             throw ServiceError.noURLForEnvironment(environment)
         }
         
         var urlComponents = URLComponents(string: urlString)
-        urlComponents?.queryItems = queryItems(for: request)
+        urlComponents?.queryItems = queryItems(for: endpoint)
         
         guard let url = urlComponents?.url else {
             throw ServiceError.invalidURLForEnvironment(environment)
         }
         
         var urlRequest = URLRequest(url: url)
-        urlRequest.allHTTPHeaderFields = httpHeaderFields(for: request)
-        urlRequest.httpMethod = httpMethod(for: request)
-        urlRequest.httpBody = httpBody(for: request)
+        urlRequest.allHTTPHeaderFields = httpHeaderFields(for: endpoint)
+        urlRequest.httpMethod = httpMethod(for: endpoint)
+        urlRequest.httpBody = httpBody(for: endpoint)
         
         return urlRequest
     }
@@ -45,8 +45,8 @@ class URLRequestFactory {
         return (name: String(name), value: value)
     }
     
-    private func httpHeaderFields<T: ServiceEndpoint>(for request: T) -> [String: String]? {
-        guard let headers = request.headers else {
+    private func httpHeaderFields<T: ServiceEndpoint>(for endpoint: T) -> [String: String]? {
+        guard let headers = endpoint.headers else {
             return nil
         }
         
@@ -61,8 +61,8 @@ class URLRequestFactory {
         return headerFields
     }
     
-    private func queryItems<T: ServiceEndpoint>(for request: T) -> [URLQueryItem]? {
-        guard let parameters = request.queryParameters else {
+    private func queryItems<T: ServiceEndpoint>(for endpoint: T) -> [URLQueryItem]? {
+        guard let parameters = endpoint.queryParameters else {
             return nil
         }
         
@@ -78,8 +78,8 @@ class URLRequestFactory {
         return items
     }
     
-    private func httpMethod<T: ServiceEndpoint>(for request: T) -> String {
-        switch request.type {
+    private func httpMethod<T: ServiceEndpoint>(for endpoint: T) -> String {
+        switch endpoint.type {
         case .get:
             return "GET"
         case .post:
@@ -87,8 +87,8 @@ class URLRequestFactory {
         }
     }
     
-    private func httpBody<T: ServiceEndpoint>(for request: T) -> Data? {
-        guard let parameters = request.postParameters else {
+    private func httpBody<T: ServiceEndpoint>(for endpoint: T) -> Data? {
+        guard let parameters = endpoint.postParameters else {
             return nil
         }
         
@@ -103,7 +103,7 @@ class URLRequestFactory {
             dict[param.name] = param.value
         }
         
-        switch request.httpBodyEncodingStrategy {
+        switch endpoint.httpBodyEncodingStrategy {
         case .json:
             return dict.asJson
         case .keyValue:
