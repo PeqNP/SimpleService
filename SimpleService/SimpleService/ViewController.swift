@@ -19,7 +19,7 @@ protocol ProjectProvider {
 
 class ViewController: UIViewController {
 
-    let productProvider: ProjectProvider = ProjectService(environment: .prod, requester: AlamofireServiceRequester())
+    let productProvider: ProjectProvider = ProjectService(environment: .prod, requester: AlamofireServiceRequester(), pluginProvider: ServicePluginProvider())
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -26,6 +26,7 @@
 		0754B65A21FFBC2700E2DECD /* ProjectSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0754B65921FFBC2700E2DECD /* ProjectSource.swift */; };
 		0754B65C21FFBCA800E2DECD /* AlamofireServiceRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0754B65B21FFBCA800E2DECD /* AlamofireServiceRequester.swift */; };
 		07862CAA220B944000C666E7 /* ServicePluginKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07862CA9220B944000C666E7 /* ServicePluginKey.swift */; };
+		07862CAC220BB92000C666E7 /* ServicePluginProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07862CAB220BB92000C666E7 /* ServicePluginProvider.swift */; };
 		CAAA56E7F4467C973120D59D /* Pods_SimpleService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 936DEC3385F201FAE731D879 /* Pods_SimpleService.framework */; };
 		EF622BA1BD8F98AEE5B4981C /* Pods_SimpleServiceUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 186191DD423C46806667624F /* Pods_SimpleServiceUITests.framework */; };
 /* End PBXBuildFile section */
@@ -64,6 +65,7 @@
 		0754B65921FFBC2700E2DECD /* ProjectSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSource.swift; sourceTree = "<group>"; };
 		0754B65B21FFBCA800E2DECD /* AlamofireServiceRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireServiceRequester.swift; sourceTree = "<group>"; };
 		07862CA9220B944000C666E7 /* ServicePluginKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicePluginKey.swift; sourceTree = "<group>"; };
+		07862CAB220BB92000C666E7 /* ServicePluginProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicePluginProvider.swift; sourceTree = "<group>"; };
 		0BB66F61E3F61523B0B14478 /* Pods-SimpleService.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleService.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleService/Pods-SimpleService.release.xcconfig"; sourceTree = "<group>"; };
 		186191DD423C46806667624F /* Pods_SimpleServiceUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleServiceUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BEB57ECFDCCCEFF6FFEE7C6 /* Pods-SimpleServiceUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleServiceUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleServiceUITests/Pods-SimpleServiceUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 				0754B64621FFBB0F00E2DECD /* ServiceEndpoint.swift */,
 				0754B64721FFBB0F00E2DECD /* ServicePlugin.swift */,
 				07862CA9220B944000C666E7 /* ServicePluginKey.swift */,
+				07862CAB220BB92000C666E7 /* ServicePluginProvider.swift */,
 				0754B64521FFBB0F00E2DECD /* ServiceRequester.swift */,
 				0754B64921FFBB0F00E2DECD /* URLRequestFactory.swift */,
 			);
@@ -392,6 +395,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0754B64C21FFBB0F00E2DECD /* ServicePlugin.swift in Sources */,
+				07862CAC220BB92000C666E7 /* ServicePluginProvider.swift in Sources */,
 				0754B65521FFBB6100E2DECD /* ProjectResponse+Backit.swift in Sources */,
 				0754B65821FFBC0B00E2DECD /* ProjectResponse.swift in Sources */,
 				0754B65C21FFBCA800E2DECD /* AlamofireServiceRequester.swift in Sources */,

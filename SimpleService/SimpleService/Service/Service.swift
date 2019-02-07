@@ -17,6 +17,7 @@ enum ServiceError: Error {
     case failedToDecode
     case noInternetConnection
     case server(Error)
+    case requiredPluginsNotFound([ServicePluginKey])
 }
 
 struct ServiceResult {
@@ -25,26 +26,18 @@ struct ServiceResult {
 }
 
 class Service {
-    
-    private static var plugins: [ServicePlugin] = []
-    
-    static func registerPlugin(_ plugin: ServicePlugin) {
-        // TODO
-    }
-    
-    static func registerPlugins(_ plugins: [ServicePlugin]) {
-        // TODO
-    }
-    
+        
     let environment: Environment
     let requester: ServiceRequester
+    let pluginProvider: ServicePluginProvider
     
     let urlRequestFactory = URLRequestFactory()
     let decoder = JSONDecoder()
     
-    init(environment: Environment, requester: ServiceRequester) {
+    init(environment: Environment, requester: ServiceRequester, pluginProvider: ServicePluginProvider) {
         self.environment = environment
         self.requester = requester
+        self.pluginProvider = pluginProvider
     }
     
     func request<T: ServiceEndpoint>(_ endpoint: T) -> Future<T.ResponseType, ServiceError> {
@@ -59,19 +52,29 @@ class Service {
             return Future(error: .unknown(error))
         }
 
-        urlRequest = pluginsFor(endpoint).reduce(urlRequest, { (urlRequest, plugin) -> URLRequest in
+        let plugins: [ServicePlugin]
+        do {
+            plugins = try pluginProvider.pluginsFor(endpoint)
+        }
+        catch let error as ServiceError {
+            return Future(error: error)
+        }
+        catch {
+            return Future(error: .unknown(error))
+        }
+        
+        urlRequest = plugins.reduce(urlRequest, { (urlRequest, plugin) -> URLRequest in
             return plugin.willSendRequest(urlRequest)
         })
         
         let promise = Promise<T.ResponseType, ServiceError>()
-        
         requester.request(urlRequest) { [weak self] (result) in
             guard let self = self else {
                 promise.failure(.unknown(nil))
                 return
             }
             
-            let result = self.pluginsFor(endpoint).reduce(result, { (response, plugin) -> ServiceResult in
+            let result = plugins.reduce(result, { (response, plugin) -> ServiceResult in
                 return plugin.didReceiveResponse(response)
             })
             
@@ -105,16 +108,10 @@ class Service {
             promise.success(decodedResponse)
         }
         
-        pluginsFor(endpoint).forEach { (plugin) in
+        plugins.forEach { (plugin) in
             plugin.didSendRequest(urlRequest)
         }
         
         return promise.future
-    }
-    
-    private func pluginsFor<T: ServiceEndpoint>(_ endpoint: T) -> [ServicePlugin] {
-        // Filter registerd plugins
-        // Emit when plugin not found
-        return []
     }
 }

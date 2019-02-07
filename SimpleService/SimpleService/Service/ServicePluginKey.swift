@@ -11,5 +11,5 @@
 import Foundation
 
 enum ServicePluginKey: Equatable {
-    
+    case `default`
 }
