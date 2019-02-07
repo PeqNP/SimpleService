@@ -23,6 +23,15 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        productProvider.projects(offset: nil, limit: 10).onComplete { (result) in
+            switch result {
+            case .success(let products):
+                print(products)
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
 }
 
