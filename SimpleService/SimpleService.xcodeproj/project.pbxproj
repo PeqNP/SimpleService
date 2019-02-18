@@ -118,7 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				0754B65621FFBBFD00E2DECD /* Model */,
-				0754B64F21FFBB2700E2DECD /* MyService */,
+				0754B64F21FFBB2700E2DECD /* ProjectService */,
 				0754B64221FFBACC00E2DECD /* Service */,
 				0754B62221FFB9CA00E2DECD /* AppDelegate.swift */,
 				0754B62421FFB9CA00E2DECD /* ViewController.swift */,
@@ -155,14 +155,14 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
-		0754B64F21FFBB2700E2DECD /* MyService */ = {
+		0754B64F21FFBB2700E2DECD /* ProjectService */ = {
 			isa = PBXGroup;
 			children = (
 				0754B65221FFBB6100E2DECD /* ProjectResponse+Backit.swift */,
 				0754B65021FFBB6100E2DECD /* ProjectsEndpoint.swift */,
 				0754B65121FFBB6100E2DECD /* ProjectService.swift */,
 			);
-			path = MyService;
+			path = ProjectService;
 			sourceTree = "<group>";
 		};
 		0754B65621FFBBFD00E2DECD /* Model */ = {
