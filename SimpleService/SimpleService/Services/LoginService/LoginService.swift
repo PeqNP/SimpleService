@@ -21,7 +21,29 @@ struct LoginResponse {
 class LoginService: Service {
     
     func login(username: String, password: String) -> Future<LoginResponse, LoginServiceError> {
-        return Future(error: .none)
+        let endpoint = LoginEndpoint(
+            headers: [
+                .secret_key("super-secret-hash" /* dependency may provide this value */)
+            ],
+            pathParameters: [
+                .version("1.1"),
+                .sessionid("my-session-id" /* dependency may provide this value */)
+            ],
+            queryParameters: [
+                .format("json")
+            ],
+            postParameters: [
+                .username(username),
+                .password(password)
+            ]
+        )
+        return request(endpoint)
+            .map { response -> LoginResponse in
+                return LoginResponse(firstName: "Leonardo", lastName: "da Vinci")
+            }
+            .mapError { (error) -> LoginServiceError in
+                return .none
+            }
     }
     
     /// func logout

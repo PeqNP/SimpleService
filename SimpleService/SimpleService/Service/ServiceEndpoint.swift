@@ -30,6 +30,8 @@ enum HTTPBodyEncodingStrategy {
 /**
  Notes:
  `Header`, `PathParameter`, `GetParameter`, and `PostParameter` must be enums with a single associated value for every case.
+ 
+ When a `ServiceEndpoint` has path parameters it is required that all path parameters are provided. If not, the `Service` will throw an `Error`.
  */
 protocol ServiceEndpoint {
     associatedtype ResponseType: Decodable

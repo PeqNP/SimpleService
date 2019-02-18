@@ -17,24 +17,24 @@ struct LoginEndpoint: ServiceEndpoint {
         let lastLogin: Date
     }
     
+    var plugins: [ServicePluginKey]? {
+        return [
+            .traceContext
+        ]
+    }
+    
     enum Header {
-        // All headers are camelcased with underscores replaced with hyphens. Thes will turn into `Secret-Key` and `Trace-Context`, respectively.
+        // All headers are camelcased with underscores replaced with hyphens. Thes will turn into `Secret-Key`.
         case secret_key(String)
-        case trace_context(String)
     }
     enum PathParameter {
         // The `case` name must be contained within the endpoint URL string w/ the same name in the following format: `%{sessionid}`.
         case sessionid(String)
+        case version(String)
     }
     enum QueryParameter {
-        // The name of the `case` is the name of the corresponding w/ no transformation. Therefore, `case funding(Bool)` will be represented as `funding=true&backerCountMin=10[&...N]` when sent to the server.
-        case funding(Bool)
-        case backerCountMin(Int)
-        case country(String)
-        case sort(String)
-        case sortDirection(String)
-        case offset(Int)
-        case limit(Int)
+        // The name of the `case` is the name of the corresponding w/ no transformation. Therefore, `case funding(Bool)` will be represented as `format=json[&...N]` when sent to the server.
+        case format(String)
     }
     enum PostParameter {
         // This works the same as a `QueryParameter` where the `case` name is the value of the key w/ no transformation.
@@ -45,7 +45,7 @@ struct LoginEndpoint: ServiceEndpoint {
     var type: ServiceRequestType = .post
     var endpoints: Endpoints = [
         // Notice: the `sessionid` is interpolated with the respective `enum PathParameter` `case` name
-        .prod: "https://www.example.com/%{sessionid}/login"
+        .prod: "https://www.example.com/%{version}/%{sessionid}/login"
     ]
     var headers: [Header]?
     var pathParameters: [PathParameter]?
