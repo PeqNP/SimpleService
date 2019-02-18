@@ -1,6 +1,9 @@
 /**
- *
- * Copyright © 2018 Backit. All rights reserved.
+ Represents the endpoint which provides projects from the Backit public API.
+ 
+ License: MIT
+ 
+ Copyright © 2019 Upstart Illustration LLC. All rights reserved.
  */
 
 import Foundation
