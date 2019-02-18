@@ -10,8 +10,6 @@ A simple service pattern written in Swift.
 
 The architecture of the library is designed for maximum testability, single responsibility, and re-usability. It doesn't make assumptions as to your app's architecture, and therefore, should be very easy to integrate into any app -- old or new.
 
-This simple app also shows you how to use dependency inversion. The `ViewController` defines a few `protocol`s which a provider must implement.
-
 ## TODO
 
 - I didn't finish the `Header`, `PathParameter`, `PostParameter` mapping logic.
