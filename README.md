@@ -12,8 +12,7 @@ The architecture of the library is designed for maximum testability, single resp
 
 ## TODO
 
-- I didn't finish the `Header`, `PathParameter`, `PostParameter` mapping logic.
-- Add an example which uses all `ServiceEndpoint` `associatedtype`s to illustrate.
+- I didn't finish the `PathParameter`, `PostParameter` mapping logic.
 - Add an example that shows how a `ServicePlugin` works. Including:
 -- modify an a request before it is sent to the server
 -- modify a response before it is consumed
