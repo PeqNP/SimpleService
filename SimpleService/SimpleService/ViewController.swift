@@ -1,5 +1,7 @@
 /**
- Provides definition of a request made to a service.
+ Provides view into the queried data.
+ 
+ For now this only prints the results of the service responses.
  
  License: MIT
  
@@ -44,7 +46,9 @@ class ViewController: UIViewController {
             }
         }
         
+        // Remove this to see an example of a live request/response
         return Void()
+        
         productProvider?.projects(offset: nil, limit: 10).onComplete { (result) in
             switch result {
             case .success(let products):
