@@ -1,7 +1,7 @@
 /**
  Public service to consume projects from the Backit service.
  
-License: MIT
+ License: MIT
  
  Copyright © 2019 Upstart Illustration LLC. All rights reserved.
  */

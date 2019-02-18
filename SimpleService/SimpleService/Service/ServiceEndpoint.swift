@@ -9,8 +9,12 @@
 import Foundation
 
 enum ServiceRequestType {
-    case get
-    case post
+    case delete  // Deletes a resource
+    case get     // Requests representation of a resource
+    case head    // Identical to GET but w/o payload
+    case patch   // Apply partial modifications to a resource
+    case post    // Submit entity to a resource
+    case put     // Replaces current represenation of a resource
 }
 
 typealias Endpoints = [Environment: String]

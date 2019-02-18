@@ -27,6 +27,8 @@
 		0754B65C21FFBCA800E2DECD /* AlamofireServiceRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0754B65B21FFBCA800E2DECD /* AlamofireServiceRequester.swift */; };
 		07862CAA220B944000C666E7 /* ServicePluginKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07862CA9220B944000C666E7 /* ServicePluginKey.swift */; };
 		07862CAC220BB92000C666E7 /* ServicePluginProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07862CAB220BB92000C666E7 /* ServicePluginProvider.swift */; };
+		078681F8221B3D7200B0EA37 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078681F7221B3D7200B0EA37 /* LoginService.swift */; };
+		078681FA221B3D7D00B0EA37 /* LoginEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078681F9221B3D7D00B0EA37 /* LoginEndpoint.swift */; };
 		CAAA56E7F4467C973120D59D /* Pods_SimpleService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 936DEC3385F201FAE731D879 /* Pods_SimpleService.framework */; };
 		EF622BA1BD8F98AEE5B4981C /* Pods_SimpleServiceUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 186191DD423C46806667624F /* Pods_SimpleServiceUITests.framework */; };
 /* End PBXBuildFile section */
@@ -66,6 +68,8 @@
 		0754B65B21FFBCA800E2DECD /* AlamofireServiceRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireServiceRequester.swift; sourceTree = "<group>"; };
 		07862CA9220B944000C666E7 /* ServicePluginKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicePluginKey.swift; sourceTree = "<group>"; };
 		07862CAB220BB92000C666E7 /* ServicePluginProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicePluginProvider.swift; sourceTree = "<group>"; };
+		078681F7221B3D7200B0EA37 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		078681F9221B3D7D00B0EA37 /* LoginEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEndpoint.swift; sourceTree = "<group>"; };
 		0BB66F61E3F61523B0B14478 /* Pods-SimpleService.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleService.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleService/Pods-SimpleService.release.xcconfig"; sourceTree = "<group>"; };
 		186191DD423C46806667624F /* Pods_SimpleServiceUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleServiceUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BEB57ECFDCCCEFF6FFEE7C6 /* Pods-SimpleServiceUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleServiceUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleServiceUITests/Pods-SimpleServiceUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -117,8 +121,8 @@
 		0754B62121FFB9CA00E2DECD /* SimpleService */ = {
 			isa = PBXGroup;
 			children = (
+				078681F5221B3D5200B0EA37 /* Services */,
 				0754B65621FFBBFD00E2DECD /* Model */,
-				0754B64F21FFBB2700E2DECD /* ProjectService */,
 				0754B64221FFBACC00E2DECD /* Service */,
 				0754B62221FFB9CA00E2DECD /* AppDelegate.swift */,
 				0754B62421FFB9CA00E2DECD /* ViewController.swift */,
@@ -172,6 +176,24 @@
 				0754B65921FFBC2700E2DECD /* ProjectSource.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		078681F5221B3D5200B0EA37 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				078681F6221B3D5E00B0EA37 /* LoginService */,
+				0754B64F21FFBB2700E2DECD /* ProjectService */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		078681F6221B3D5E00B0EA37 /* LoginService */ = {
+			isa = PBXGroup;
+			children = (
+				078681F9221B3D7D00B0EA37 /* LoginEndpoint.swift */,
+				078681F7221B3D7200B0EA37 /* LoginService.swift */,
+			);
+			path = LoginService;
 			sourceTree = "<group>";
 		};
 		D0BA5BBAC5EE5326357A338C /* Frameworks */ = {
@@ -403,9 +425,11 @@
 				0754B62521FFB9CA00E2DECD /* ViewController.swift in Sources */,
 				0754B64421FFBAD700E2DECD /* Environment.swift in Sources */,
 				0754B64B21FFBB0F00E2DECD /* ServiceEndpoint.swift in Sources */,
+				078681F8221B3D7200B0EA37 /* LoginService.swift in Sources */,
 				0754B65421FFBB6100E2DECD /* ProjectService.swift in Sources */,
 				0754B64A21FFBB0F00E2DECD /* ServiceRequester.swift in Sources */,
 				0754B64E21FFBB0F00E2DECD /* URLRequestFactory.swift in Sources */,
+				078681FA221B3D7D00B0EA37 /* LoginEndpoint.swift in Sources */,
 				0754B65321FFBB6100E2DECD /* ProjectsEndpoint.swift in Sources */,
 				07862CAA220B944000C666E7 /* ServicePluginKey.swift in Sources */,
 				0754B62321FFB9CA00E2DECD /* AppDelegate.swift in Sources */,
