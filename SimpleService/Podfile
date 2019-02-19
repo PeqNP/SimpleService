@@ -1,3 +1,5 @@
+ENV['COCOAPODS_DISABLE_STATS'] = "true"
+
 platform :ios, '11.0'
 
 use_frameworks!
@@ -8,6 +10,7 @@ target 'SimpleService' do
 end
 
 target 'SimpleServiceUITests' do
+    pod 'Alamofire'
     pod 'BrightFutures'
     pod 'Quick'
     pod 'Nimble'

@@ -8,7 +8,6 @@
  Copyright © 2018 Upstart Illustration LLC. All rights reserved.
  */
 
-import Alamofire
 import BrightFutures
 import Foundation
 
