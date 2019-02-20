@@ -9,8 +9,8 @@ target 'SimpleService' do
     pod 'BrightFutures'
 end
 
-target 'SimpleServiceUITests' do
-    pod 'Alamofire'
+target 'SimpleServiceTests' do
+    pod 'AutoEquatable'
     pod 'BrightFutures'
     pod 'Quick'
     pod 'Nimble'
@@ -18,5 +18,5 @@ target 'SimpleServiceUITests' do
     pod 'KIF-Quick'
     pod 'Spry'
     pod 'Spry+Nimble'
-    pod 'AutoEquatable'
 end
+

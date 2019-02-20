@@ -30,13 +30,13 @@
 		078681FA221B3D7D00B0EA37 /* LoginEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078681F9221B3D7D00B0EA37 /* LoginEndpoint.swift */; };
 		078681FD221B467D00B0EA37 /* TraceContextServicePlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078681FC221B467D00B0EA37 /* TraceContextServicePlugin.swift */; };
 		07868200221B4B6C00B0EA37 /* InformationalServiceRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078681FF221B4B6C00B0EA37 /* InformationalServiceRequester.swift */; };
-		07868203221C59C000B0EA37 /* LoginServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07868202221C59C000B0EA37 /* LoginServiceSpec.swift */; };
+		07C6C731221DEDF000E79C43 /* LoginServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C6C730221DEDF000E79C43 /* LoginServiceSpec.swift */; };
 		CAAA56E7F4467C973120D59D /* Pods_SimpleService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 936DEC3385F201FAE731D879 /* Pods_SimpleService.framework */; };
-		EF622BA1BD8F98AEE5B4981C /* Pods_SimpleServiceUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 186191DD423C46806667624F /* Pods_SimpleServiceUITests.framework */; };
+		E05BCBB7CB7C76E3D54ECD47 /* Pods_SimpleServiceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7806193BD4C3787F81097187 /* Pods_SimpleServiceTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0754B63421FFB9D200E2DECD /* PBXContainerItemProxy */ = {
+		07C6C72A221DEDCF00E79C43 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0754B61721FFB9CA00E2DECD /* Project object */;
 			proxyType = 1;
@@ -53,8 +53,6 @@
 		0754B62921FFB9D200E2DECD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0754B62C21FFB9D200E2DECD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0754B62E21FFB9D200E2DECD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0754B63321FFB9D200E2DECD /* SimpleServiceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleServiceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0754B63921FFB9D200E2DECD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0754B64321FFBAD700E2DECD /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		0754B64521FFBB0F00E2DECD /* ServiceRequester.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceRequester.swift; sourceTree = "<group>"; };
 		0754B64621FFBB0F00E2DECD /* ServiceEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceEndpoint.swift; sourceTree = "<group>"; };
@@ -73,12 +71,17 @@
 		078681F9221B3D7D00B0EA37 /* LoginEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEndpoint.swift; sourceTree = "<group>"; };
 		078681FC221B467D00B0EA37 /* TraceContextServicePlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraceContextServicePlugin.swift; sourceTree = "<group>"; };
 		078681FF221B4B6C00B0EA37 /* InformationalServiceRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationalServiceRequester.swift; sourceTree = "<group>"; };
-		07868202221C59C000B0EA37 /* LoginServiceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginServiceSpec.swift; sourceTree = "<group>"; };
+		07C6C725221DEDCF00E79C43 /* SimpleServiceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleServiceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		07C6C729221DEDCF00E79C43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07C6C730221DEDF000E79C43 /* LoginServiceSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginServiceSpec.swift; sourceTree = "<group>"; };
 		0BB66F61E3F61523B0B14478 /* Pods-SimpleService.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleService.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleService/Pods-SimpleService.release.xcconfig"; sourceTree = "<group>"; };
 		186191DD423C46806667624F /* Pods_SimpleServiceUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleServiceUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BEB57ECFDCCCEFF6FFEE7C6 /* Pods-SimpleServiceUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleServiceUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleServiceUITests/Pods-SimpleServiceUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		7806193BD4C3787F81097187 /* Pods_SimpleServiceTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleServiceTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		82047355FD44BA453301845F /* Pods-SimpleServiceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleServiceTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleServiceTests/Pods-SimpleServiceTests.release.xcconfig"; sourceTree = "<group>"; };
 		92EFC9AEE0EFBA3D2BA7580C /* Pods-SimpleService.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleService.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleService/Pods-SimpleService.debug.xcconfig"; sourceTree = "<group>"; };
 		936DEC3385F201FAE731D879 /* Pods_SimpleService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9BC1CA52F7CD147424DF89D /* Pods-SimpleServiceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleServiceTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleServiceTests/Pods-SimpleServiceTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B7B4C4811981AF69620EBDB2 /* Pods-SimpleServiceUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleServiceUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleServiceUITests/Pods-SimpleServiceUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -91,11 +94,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0754B63021FFB9D200E2DECD /* Frameworks */ = {
+		07C6C722221DEDCF00E79C43 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF622BA1BD8F98AEE5B4981C /* Pods_SimpleServiceUITests.framework in Frameworks */,
+				E05BCBB7CB7C76E3D54ECD47 /* Pods_SimpleServiceTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,7 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				0754B62121FFB9CA00E2DECD /* SimpleService */,
-				0754B63621FFB9D200E2DECD /* SimpleServiceUITests */,
+				07C6C726221DEDCF00E79C43 /* SimpleServiceTests */,
 				0754B62021FFB9CA00E2DECD /* Products */,
 				E93D942F8DC23DC19D125658 /* Pods */,
 				D0BA5BBAC5EE5326357A338C /* Frameworks */,
@@ -117,7 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				0754B61F21FFB9CA00E2DECD /* SimpleService.app */,
-				0754B63321FFB9D200E2DECD /* SimpleServiceUITests.xctest */,
+				07C6C725221DEDCF00E79C43 /* SimpleServiceTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -138,15 +141,6 @@
 				0754B62E21FFB9D200E2DECD /* Info.plist */,
 			);
 			path = SimpleService;
-			sourceTree = "<group>";
-		};
-		0754B63621FFB9D200E2DECD /* SimpleServiceUITests */ = {
-			isa = PBXGroup;
-			children = (
-				07868201221C59A800B0EA37 /* Specs */,
-				0754B63921FFB9D200E2DECD /* Info.plist */,
-			);
-			path = SimpleServiceUITests;
 			sourceTree = "<group>";
 		};
 		0754B64221FFBACC00E2DECD /* Service */ = {
@@ -218,12 +212,21 @@
 			path = ServiceRequesters;
 			sourceTree = "<group>";
 		};
-		07868201221C59A800B0EA37 /* Specs */ = {
+		07C6C726221DEDCF00E79C43 /* SimpleServiceTests */ = {
 			isa = PBXGroup;
 			children = (
-				07868202221C59C000B0EA37 /* LoginServiceSpec.swift */,
+				07C6C72F221DEDD500E79C43 /* Spec */,
+				07C6C729221DEDCF00E79C43 /* Info.plist */,
 			);
-			path = Specs;
+			path = SimpleServiceTests;
+			sourceTree = "<group>";
+		};
+		07C6C72F221DEDD500E79C43 /* Spec */ = {
+			isa = PBXGroup;
+			children = (
+				07C6C730221DEDF000E79C43 /* LoginServiceSpec.swift */,
+			);
+			path = Spec;
 			sourceTree = "<group>";
 		};
 		D0BA5BBAC5EE5326357A338C /* Frameworks */ = {
@@ -231,6 +234,7 @@
 			children = (
 				936DEC3385F201FAE731D879 /* Pods_SimpleService.framework */,
 				186191DD423C46806667624F /* Pods_SimpleServiceUITests.framework */,
+				7806193BD4C3787F81097187 /* Pods_SimpleServiceTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -242,6 +246,8 @@
 				0BB66F61E3F61523B0B14478 /* Pods-SimpleService.release.xcconfig */,
 				1BEB57ECFDCCCEFF6FFEE7C6 /* Pods-SimpleServiceUITests.debug.xcconfig */,
 				B7B4C4811981AF69620EBDB2 /* Pods-SimpleServiceUITests.release.xcconfig */,
+				A9BC1CA52F7CD147424DF89D /* Pods-SimpleServiceTests.debug.xcconfig */,
+				82047355FD44BA453301845F /* Pods-SimpleServiceTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -268,25 +274,25 @@
 			productReference = 0754B61F21FFB9CA00E2DECD /* SimpleService.app */;
 			productType = "com.apple.product-type.application";
 		};
-		0754B63221FFB9D200E2DECD /* SimpleServiceUITests */ = {
+		07C6C724221DEDCF00E79C43 /* SimpleServiceTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0754B63F21FFB9D200E2DECD /* Build configuration list for PBXNativeTarget "SimpleServiceUITests" */;
+			buildConfigurationList = 07C6C72C221DEDCF00E79C43 /* Build configuration list for PBXNativeTarget "SimpleServiceTests" */;
 			buildPhases = (
-				65C51E520E7120A475C7ABAE /* [CP] Check Pods Manifest.lock */,
-				0754B62F21FFB9D200E2DECD /* Sources */,
-				0754B63021FFB9D200E2DECD /* Frameworks */,
-				0754B63121FFB9D200E2DECD /* Resources */,
-				DD8A2CB4EE0770F5B17A23F2 /* [CP] Embed Pods Frameworks */,
+				ADC2CC9DD70CE82BB0D3320D /* [CP] Check Pods Manifest.lock */,
+				07C6C721221DEDCF00E79C43 /* Sources */,
+				07C6C722221DEDCF00E79C43 /* Frameworks */,
+				07C6C723221DEDCF00E79C43 /* Resources */,
+				88843F9BBC462AFA6B2A934A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				0754B63521FFB9D200E2DECD /* PBXTargetDependency */,
+				07C6C72B221DEDCF00E79C43 /* PBXTargetDependency */,
 			);
-			name = SimpleServiceUITests;
-			productName = SimpleServiceUITests;
-			productReference = 0754B63321FFB9D200E2DECD /* SimpleServiceUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
+			name = SimpleServiceTests;
+			productName = SimpleServiceTests;
+			productReference = 07C6C725221DEDCF00E79C43 /* SimpleServiceTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -301,7 +307,7 @@
 					0754B61E21FFB9CA00E2DECD = {
 						CreatedOnToolsVersion = 10.1;
 					};
-					0754B63221FFB9D200E2DECD = {
+					07C6C724221DEDCF00E79C43 = {
 						CreatedOnToolsVersion = 10.1;
 						TestTargetID = 0754B61E21FFB9CA00E2DECD;
 					};
@@ -321,7 +327,7 @@
 			projectRoot = "";
 			targets = (
 				0754B61E21FFB9CA00E2DECD /* SimpleService */,
-				0754B63221FFB9D200E2DECD /* SimpleServiceUITests */,
+				07C6C724221DEDCF00E79C43 /* SimpleServiceTests */,
 			);
 		};
 /* End PBXProject section */
@@ -337,7 +343,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0754B63121FFB9D200E2DECD /* Resources */ = {
+		07C6C723221DEDCF00E79C43 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -365,54 +371,15 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		65C51E520E7120A475C7ABAE /* [CP] Check Pods Manifest.lock */ = {
+		88843F9BBC462AFA6B2A934A /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SimpleServiceUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CD0DCD837B3BB59D9B9F1EAA /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-SimpleService/Pods-SimpleService-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/BrightFutures/BrightFutures.framework",
-				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BrightFutures.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SimpleService/Pods-SimpleService-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DD8A2CB4EE0770F5B17A23F2 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-SimpleServiceUITests/Pods-SimpleServiceUITests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-SimpleServiceTests/Pods-SimpleServiceTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/BrightFutures/BrightFutures.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/AutoEquatable/AutoEquatable.framework",
@@ -424,8 +391,9 @@
 				"${BUILT_PRODUCTS_DIR}/Spry+Nimble/Spry_Nimble.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BrightFutures.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AutoEquatable.framework",
@@ -438,7 +406,51 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SimpleServiceUITests/Pods-SimpleServiceUITests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SimpleServiceTests/Pods-SimpleServiceTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ADC2CC9DD70CE82BB0D3320D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SimpleServiceTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CD0DCD837B3BB59D9B9F1EAA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SimpleService/Pods-SimpleService-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/BrightFutures/BrightFutures.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BrightFutures.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SimpleService/Pods-SimpleService-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -471,21 +483,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0754B62F21FFB9D200E2DECD /* Sources */ = {
+		07C6C721221DEDCF00E79C43 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07868203221C59C000B0EA37 /* LoginServiceSpec.swift in Sources */,
+				07C6C731221DEDF000E79C43 /* LoginServiceSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		0754B63521FFB9D200E2DECD /* PBXTargetDependency */ = {
+		07C6C72B221DEDCF00E79C43 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 0754B61E21FFB9CA00E2DECD /* SimpleService */;
-			targetProxy = 0754B63421FFB9D200E2DECD /* PBXContainerItemProxy */;
+			targetProxy = 07C6C72A221DEDCF00E79C43 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -663,43 +675,45 @@
 			};
 			name = Release;
 		};
-		0754B64021FFB9D200E2DECD /* Debug */ = {
+		07C6C72D221DEDCF00E79C43 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1BEB57ECFDCCCEFF6FFEE7C6 /* Pods-SimpleServiceUITests.debug.xcconfig */;
+			baseConfigurationReference = A9BC1CA52F7CD147424DF89D /* Pods-SimpleServiceTests.debug.xcconfig */;
 			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DSZ2DNDVRK;
-				INFOPLIST_FILE = SimpleServiceUITests/Info.plist;
+				INFOPLIST_FILE = SimpleServiceTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.upstartillustration.SimpleServiceUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.upstartillustration.SimpleServiceTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = SimpleService;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SimpleService.app/SimpleService";
 			};
 			name = Debug;
 		};
-		0754B64121FFB9D200E2DECD /* Release */ = {
+		07C6C72E221DEDCF00E79C43 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B7B4C4811981AF69620EBDB2 /* Pods-SimpleServiceUITests.release.xcconfig */;
+			baseConfigurationReference = 82047355FD44BA453301845F /* Pods-SimpleServiceTests.release.xcconfig */;
 			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DSZ2DNDVRK;
-				INFOPLIST_FILE = SimpleServiceUITests/Info.plist;
+				INFOPLIST_FILE = SimpleServiceTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.upstartillustration.SimpleServiceUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.upstartillustration.SimpleServiceTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = SimpleService;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SimpleService.app/SimpleService";
 			};
 			name = Release;
 		};
@@ -724,11 +738,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0754B63F21FFB9D200E2DECD /* Build configuration list for PBXNativeTarget "SimpleServiceUITests" */ = {
+		07C6C72C221DEDCF00E79C43 /* Build configuration list for PBXNativeTarget "SimpleServiceTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0754B64021FFB9D200E2DECD /* Debug */,
-				0754B64121FFB9D200E2DECD /* Release */,
+				07C6C72D221DEDCF00E79C43 /* Debug */,
+				07C6C72E221DEDCF00E79C43 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
