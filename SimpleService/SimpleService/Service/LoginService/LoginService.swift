@@ -10,7 +10,7 @@ import BrightFutures
 import Foundation
 
 enum LoginServiceError: Error {
-    case none
+    case unknown(Error)
 }
 
 struct LoginResponse {
@@ -29,11 +29,11 @@ class LoginService: LoginProvider {
     func login(username: String, password: String) -> Future<LoginResponse, LoginServiceError> {
         let endpoint = LoginEndpoint(
             headers: [
-                .secret_key("super-secret-hash" /* dependency may provide this value */)
+                .secret_key("super-secret-hash" /* dependency may provide this value or is injected from a `ServicePlugin` */)
             ],
             pathParameters: [
                 .version("1.1"),
-                .sessionid("my-session-id" /* dependency may provide this value */)
+                .sessionid("my-session-id" /* dependency may provide this value or is injected from a `ServicePlugin` */)
             ],
             queryParameters: [
                 .format("json")
@@ -48,7 +48,7 @@ class LoginService: LoginProvider {
                 return LoginResponse(firstName: "Leonardo", lastName: "da Vinci")
             }
             .mapError { (error) -> LoginServiceError in
-                return .none
+                return .unknown(error)
             }
     }
     

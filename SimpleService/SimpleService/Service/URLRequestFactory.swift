@@ -11,9 +11,11 @@ import Foundation
 class URLRequestFactory {
     
     func make<T: ServiceEndpoint>(from request: T, in environment: Environment) throws -> URLRequest {
-        guard let urlString = request.endpoints[environment] else {
+        guard let rawUrlString = request.endpoints[environment] else {
             throw ServiceError.noURLForEnvironment(environment)
         }
+        
+        let urlString = interpolatePathParameters(for: request, on: rawUrlString)
         
         var urlComponents = URLComponents(string: urlString)
         urlComponents?.queryItems = queryItems(for: request)
@@ -43,6 +45,20 @@ class URLRequestFactory {
         let valueSubstring = string[startIndex..<endIndex]
         let value = String(valueSubstring).replacingOccurrences(of: "\"", with: "")
         return (name: String(name), value: value)
+    }
+    
+    private func interpolatePathParameters<T: ServiceEndpoint>(for request: T, on urlString: String) -> String {
+        guard let pathParameters = request.pathParameters else {
+            return urlString
+        }
+        
+        return pathParameters.reduce(urlString) { (result, parameter) -> String in
+            guard let param = nameValue(for: "\(parameter)") else {
+                print("Failed to extract key/value path parameter for \(parameter). It must be an `enum` case with a single associated value.")
+                return ""
+            }
+            return result.replacingOccurrences(of: "{\(param.name)}", with: param.value)
+        }
     }
     
     private func httpHeaderFields<T: ServiceEndpoint>(for request: T) -> [String: String]? {

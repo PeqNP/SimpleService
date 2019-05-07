@@ -28,7 +28,7 @@ struct LoginEndpoint: ServiceEndpoint {
         case secret_key(String)
     }
     enum PathParameter {
-        // The `case` name must be contained within the endpoint URL string w/ the same name in the following format: `%{sessionid}`.
+        // The `case` name must be contained within the endpoint URL string w/ the same name in the following format: `{sessionid}`.
         case sessionid(String)
         case version(String)
     }
@@ -45,7 +45,7 @@ struct LoginEndpoint: ServiceEndpoint {
     var type: ServiceRequestType = .post
     var endpoints: Endpoints = [
         // Notice: the `sessionid` is interpolated with the respective `enum PathParameter` `case` name
-        .prod: "https://www.example.com/%{version}/%{sessionid}/login"
+        .prod: "https://www.example.com/{version}/{sessionid}/login"
     ]
     var headers: [Header]?
     var pathParameters: [PathParameter]?
