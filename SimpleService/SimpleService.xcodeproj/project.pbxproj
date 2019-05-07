@@ -149,8 +149,8 @@
 		0754B64221FFBACC00E2DECD /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				078681F6221B3D5E00B0EA37 /* LoginService */,
-				0754B64F21FFBB2700E2DECD /* ProjectService */,
+				078681F6221B3D5E00B0EA37 /* Login */,
+				0754B64F21FFBB2700E2DECD /* Project */,
 				07152BD8228105C100FCEDBB /* BrightFutures+Upstart.swift */,
 				0754B64321FFBAD700E2DECD /* Environment.swift */,
 				0754B64821FFBB0F00E2DECD /* Service.swift */,
@@ -164,13 +164,13 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
-		0754B64F21FFBB2700E2DECD /* ProjectService */ = {
+		0754B64F21FFBB2700E2DECD /* Project */ = {
 			isa = PBXGroup;
 			children = (
 				0754B65021FFBB6100E2DECD /* ProjectsEndpoint.swift */,
 				0754B65121FFBB6100E2DECD /* ProjectService.swift */,
 			);
-			path = ProjectService;
+			path = Project;
 			sourceTree = "<group>";
 		};
 		0754B65621FFBBFD00E2DECD /* Domain */ = {
@@ -184,13 +184,13 @@
 			path = Domain;
 			sourceTree = "<group>";
 		};
-		078681F6221B3D5E00B0EA37 /* LoginService */ = {
+		078681F6221B3D5E00B0EA37 /* Login */ = {
 			isa = PBXGroup;
 			children = (
 				078681F9221B3D7D00B0EA37 /* LoginEndpoint.swift */,
 				078681F7221B3D7200B0EA37 /* LoginService.swift */,
 			);
-			path = LoginService;
+			path = Login;
 			sourceTree = "<group>";
 		};
 		078681FB221B45A200B0EA37 /* ServicePlugins */ = {
