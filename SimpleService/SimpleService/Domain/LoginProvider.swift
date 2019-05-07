@@ -8,6 +8,10 @@
 import BrightFutures
 import Foundation
 
+enum LoginProviderError: Error {
+    case unknown(Error)
+}
+
 protocol LoginProvider {
-    func login(username: String, password: String) -> Future<LoginResponse, LoginServiceError>
+    func login(username: String, password: String) -> Future<User, LoginProviderError>
 }

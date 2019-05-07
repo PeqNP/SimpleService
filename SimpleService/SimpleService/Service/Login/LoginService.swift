@@ -9,15 +9,6 @@
 import BrightFutures
 import Foundation
 
-enum LoginServiceError: Error {
-    case unknown(Error)
-}
-
-struct LoginResponse {
-    let firstName: String
-    let lastName: String
-}
-
 class LoginService: LoginProvider {
     
     let service: Service
@@ -26,7 +17,7 @@ class LoginService: LoginProvider {
         self.service = service
     }
     
-    func login(username: String, password: String) -> Future<LoginResponse, LoginServiceError> {
+    func login(username: String, password: String) -> Future<User, LoginProviderError> {
         let endpoint = LoginEndpoint(
             headers: [
                 .secret_key("super-secret-hash" /* dependency may provide this value or is injected from a `ServicePlugin` */)
@@ -44,10 +35,10 @@ class LoginService: LoginProvider {
             ]
         )
         return service.request(endpoint)
-            .map { response -> LoginResponse in
-                return LoginResponse(firstName: "Leonardo", lastName: "da Vinci")
+            .map { response -> User in
+                return User(firstName: response.firstName, lastName: response.lastName)
             }
-            .mapError { (error) -> LoginServiceError in
+            .mapError { (error) -> LoginProviderError in
                 return .unknown(error)
             }
     }

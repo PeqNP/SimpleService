@@ -5,80 +5,59 @@
  Copyright © 2019 Upstart Illustration LLC. All rights reserved.
  */
 
-import AutoEquatable
 import BrightFutures
 import Foundation
 import Nimble
 import Quick
 import Spry
+import Spry_Nimble
 
 @testable import SimpleService
-
-class FakeServiceRequester: ServiceRequester, Spryable {
-    enum ClassFunction: String, StringRepresentable {
-        case none
-    }
-
-    enum Function: String, StringRepresentable {
-        case request = "request(_:callback:)"
-    }
-
-    func request(_ urlRequest: URLRequest, callback: @escaping (ServiceResult) -> Void) {
-        return spryify(arguments: urlRequest, callback)
-    }
-}
-
-class FakeServicePluginProvider: ServicePluginProvider, Spryable {
-    enum ClassFunction: String, StringRepresentable {
-        case none
-    }
-
-    enum Function: String, StringRepresentable {
-        case registerPlugin = "registerPlugin(_:)"
-        case registerPlugins = "registerPlugins(_:)"
-    }
-
-    override func registerPlugin(_ plugin: ServicePlugin) {
-        return spryify(arguments: plugin)
-    }
-
-    override func registerPlugins(_ plugins: [ServicePlugin]) {
-        return spryify(arguments: plugins)
-    }
-}
-
-extension Future {
-    func waitUntilCompleted() {
-        expect(self.isCompleted).toEventually(beTrue())
-    }
-}
-
-extension LoginResponse: AutoEquatable { }
 
 class LoginServiceSpec: QuickSpec {
     override func spec() {
         
         describe("LoginService") {
             var subject: LoginService!
-            var requester: FakeServiceRequester!
-            var pluginProvider: FakeServicePluginProvider!
+            var service: FakeService!
             
             beforeEach {
-                requester = FakeServiceRequester()
-                pluginProvider = FakeServicePluginProvider()
-                subject = LoginService(environment: .prod, requester: requester, pluginProvider: pluginProvider)
+                service = FakeService()
+                subject = LoginService(service: service)
             }
             
             describe("login") {
-                var future: Future<LoginResponse, LoginServiceError>!
+                var future: Future<User, LoginProviderError>!
                 
                 beforeEach {
+                    let response = LoginEndpoint.ResponseType(firstName: "Eric", lastName: "Chamberlain", rewardsLevel: 1, lastLogin: Date())
+                    service.stub(.request).andReturn(Future<LoginEndpoint.ResponseType, ServiceError>(value: response))
                     future = subject.login(username: "username", password: "password")
-                    future.waitUntilCompleted()
                 }
                 
-                it("should have returned a response") {
-                    expect(future.value).to(equal(LoginResponse(firstName: "Eric", lastName: "Chamberlain")))
+                it("should have made the correct request") {
+                    let expectedEndpoint = LoginEndpoint(
+                        headers: [
+                            .secret_key("super-secret-hash")
+                        ],
+                        pathParameters: [
+                            .version("1.1"),
+                            .sessionid("my-session-id")
+                        ],
+                        queryParameters: [
+                            .format("json")
+                        ],
+                        postParameters: [
+                            .username("username"),
+                            .password("password")
+                        ]
+                    )
+                    expect(service).to(haveReceived(.request, with: expectedEndpoint))
+                }
+                
+                it("should have returned the correct response") {
+                    let expecetedUser = User(firstName: "Eric", lastName: "Chamberlain")
+                    expect(future.value).toEventually(equal(expecetedUser))
                 }
             }
         }
