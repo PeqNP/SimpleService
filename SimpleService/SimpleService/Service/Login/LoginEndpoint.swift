@@ -19,7 +19,9 @@ struct LoginEndpoint: ServiceEndpoint {
     
     var plugins: [ServicePluginKey]? {
         return [
+            // This endpoint requires the trace context plugin.
             .traceContext
+            // You could also imagine having an "Authorization Plugin" which manages the user's session. Where the endpoint would require the user's session ID in the request (perhaps via a header). The plugin could also be responsible for logging the user in, if needed.
         ]
     }
     
@@ -44,7 +46,7 @@ struct LoginEndpoint: ServiceEndpoint {
     
     var type: ServiceRequestType = .post
     var endpoints: Endpoints = [
-        // Notice: the `sessionid` is interpolated with the respective `enum PathParameter` `case` name
+        // Notice: the `sessionid` and `version` are interpolated with the respective `enum PathParameter` `case` values.
         .prod: "https://www.example.com/{version}/{sessionid}/login"
     ]
     var headers: [Header]?
