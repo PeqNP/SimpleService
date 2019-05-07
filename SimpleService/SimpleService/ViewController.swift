@@ -11,14 +11,6 @@
 import BrightFutures
 import UIKit
 
-enum ProjectProviderError: Error {
-    case failedToLoadProject
-}
-
-protocol ProjectProvider {
-    func projects(offset: Any?, limit: Int) -> Future<ProjectResponse, ProjectProviderError>
-}
-
 class ViewController: UIViewController {
 
     var loginService: LoginService?

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		07152BD9228105C100FCEDBB /* BrightFutures+Upstart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07152BD8228105C100FCEDBB /* BrightFutures+Upstart.swift */; };
 		07152BDB2281075E00FCEDBB /* LoginProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07152BDA2281075E00FCEDBB /* LoginProvider.swift */; };
+		07152BDD22810DFB00FCEDBB /* ProjectProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07152BDC22810DFB00FCEDBB /* ProjectProvider.swift */; };
 		0754B62321FFB9CA00E2DECD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0754B62221FFB9CA00E2DECD /* AppDelegate.swift */; };
 		0754B62521FFB9CA00E2DECD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0754B62421FFB9CA00E2DECD /* ViewController.swift */; };
 		0754B62821FFB9CA00E2DECD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0754B62621FFB9CA00E2DECD /* Main.storyboard */; };
@@ -50,6 +51,7 @@
 /* Begin PBXFileReference section */
 		07152BD8228105C100FCEDBB /* BrightFutures+Upstart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BrightFutures+Upstart.swift"; sourceTree = "<group>"; };
 		07152BDA2281075E00FCEDBB /* LoginProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProvider.swift; sourceTree = "<group>"; };
+		07152BDC22810DFB00FCEDBB /* ProjectProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectProvider.swift; sourceTree = "<group>"; };
 		0754B61F21FFB9CA00E2DECD /* SimpleService.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleService.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0754B62221FFB9CA00E2DECD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0754B62421FFB9CA00E2DECD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 		0754B64F21FFBB2700E2DECD /* Project */ = {
 			isa = PBXGroup;
 			children = (
+				0754B65221FFBB6100E2DECD /* ProjectResponse.swift */,
 				0754B65021FFBB6100E2DECD /* ProjectsEndpoint.swift */,
 				0754B65121FFBB6100E2DECD /* ProjectService.swift */,
 			);
@@ -178,8 +181,8 @@
 			children = (
 				07152BDA2281075E00FCEDBB /* LoginProvider.swift */,
 				0754B65721FFBC0B00E2DECD /* Project.swift */,
-				0754B65221FFBB6100E2DECD /* ProjectResponse.swift */,
 				0754B65921FFBC2700E2DECD /* ProjectSource.swift */,
+				07152BDC22810DFB00FCEDBB /* ProjectProvider.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -467,6 +470,7 @@
 				0754B64D21FFBB0F00E2DECD /* Service.swift in Sources */,
 				0754B62521FFB9CA00E2DECD /* ViewController.swift in Sources */,
 				0754B64421FFBAD700E2DECD /* Environment.swift in Sources */,
+				07152BDD22810DFB00FCEDBB /* ProjectProvider.swift in Sources */,
 				07152BD9228105C100FCEDBB /* BrightFutures+Upstart.swift in Sources */,
 				0754B64B21FFBB0F00E2DECD /* ServiceEndpoint.swift in Sources */,
 				078681F8221B3D7200B0EA37 /* LoginService.swift in Sources */,
