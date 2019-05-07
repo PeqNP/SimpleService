@@ -17,14 +17,14 @@ enum InformationalError: Error {
 
 class InformationalServiceRequester: ServiceRequester {
     func request(_ urlRequest: URLRequest, callback: @escaping (ServiceResult) -> Void) {
-        print("URL:\n \(urlRequest)")
-        print("Headers:\n \(urlRequest.allHTTPHeaderFields ?? [String: String]())")
+        print("URL: \(urlRequest)")
+        print("  Headers: \(urlRequest.allHTTPHeaderFields ?? [String: String]())")
         if let httpBody = urlRequest.httpBody {
-            print("Body:\n \(String(data: httpBody, encoding: .utf8) ?? "nil")")
+            print("  Body: \(String(data: httpBody, encoding: .utf8) ?? "nil")")
         }
         else {
-            print("Body: nil")
+            print("  Body: nil")
         }
-        callback(ServiceResult(data: nil, error: InformationalError.emptyResponse))
+        callback(ServiceResult(statusCode: 0, data: nil, error: InformationalError.emptyResponse))
     }
 }

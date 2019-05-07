@@ -17,5 +17,6 @@
 import Foundation
 
 enum ServicePluginKey: Equatable {
-    case traceContext // Inject a trace context from metrics provider
+    /// Inject a trace context from metrics provider
+    case traceContext
 }

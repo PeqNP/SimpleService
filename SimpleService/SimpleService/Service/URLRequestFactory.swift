@@ -10,24 +10,22 @@ import Foundation
 
 class URLRequestFactory {
     
-    func make<T: ServiceEndpoint>(from endpoint: T, in environment: Environment) throws -> URLRequest {
-        guard var urlString = endpoint.endpoints[environment] else {
+    func make<T: ServiceEndpoint>(from request: T, in environment: Environment) throws -> URLRequest {
+        guard let urlString = request.endpoints[environment] else {
             throw ServiceError.noURLForEnvironment(environment)
         }
         
-        urlString = interpolatePathParameters(urlString: urlString, using: endpoint)
-        
         var urlComponents = URLComponents(string: urlString)
-        urlComponents?.queryItems = queryItems(for: endpoint)
+        urlComponents?.queryItems = queryItems(for: request)
         
         guard let url = urlComponents?.url else {
             throw ServiceError.invalidURLForEnvironment(environment)
         }
         
         var urlRequest = URLRequest(url: url)
-        urlRequest.allHTTPHeaderFields = httpHeaderFields(for: endpoint)
-        urlRequest.httpMethod = httpMethod(for: endpoint)
-        urlRequest.httpBody = httpBody(for: endpoint)
+        urlRequest.allHTTPHeaderFields = httpHeaderFields(for: request)
+        urlRequest.httpMethod = httpMethod(for: request)
+        urlRequest.httpBody = httpBody(for: request)
         
         return urlRequest
     }
@@ -47,35 +45,31 @@ class URLRequestFactory {
         return (name: String(name), value: value)
     }
     
-    private func httpHeaderFields<T: ServiceEndpoint>(for endpoint: T) -> [String: String]? {
-        guard let headers = endpoint.headers else {
+    private func httpHeaderFields<T: ServiceEndpoint>(for request: T) -> [String: String]? {
+        guard let headers = request.headers else {
             return nil
         }
-        
+
         var headerFields = [String: String]()
         for header in headers {
             guard let param = nameValue(for: "\(header)") else {
-                print("ERROR: Failed to extract key/value header parameter for \(header). It must be an `enum` case with a single associated value.")
+                print("Failed to extract key/value header parameter for \(header). It must be an `enum` case with a single associated value.")
                 return nil
             }
-            let nameParts = param.name.components(separatedBy: "_").map { (string) -> String in
-                return string.capitalizedFirstLetter()
-            }
-            let camelCasedName = nameParts.joined(separator: "-")
-            headerFields[camelCasedName] = param.value
+            headerFields[param.name] = param.value
         }
         return headerFields
     }
     
-    private func queryItems<T: ServiceEndpoint>(for endpoint: T) -> [URLQueryItem]? {
-        guard let parameters = endpoint.queryParameters else {
+    private func queryItems<T: ServiceEndpoint>(for request: T) -> [URLQueryItem]? {
+        guard let parameters = request.queryParameters else {
             return nil
         }
         
         var items = [URLQueryItem]()
         for parameter in parameters {
             guard let param = nameValue(for: "\(parameter)") else {
-                print("ERROR: Failed to extract key/value GET parameter for \(parameter). It must be an `enum` case with a single associated value.")
+                print("Failed to extract key/value GET parameter for \(parameter). It must be an `enum` case with a single associated value.")
                 return nil
             }
             
@@ -84,25 +78,17 @@ class URLRequestFactory {
         return items
     }
     
-    private func httpMethod<T: ServiceEndpoint>(for endpoint: T) -> String {
-        switch endpoint.type {
-        case .delete:
-            return "DELETE"
+    private func httpMethod<T: ServiceEndpoint>(for request: T) -> String {
+        switch request.type {
         case .get:
             return "GET"
-        case .head:
-            return "HEAD"
-        case .patch:
-            return "PATCH"
         case .post:
             return "POST"
-        case .put:
-            return "PUT"
         }
     }
     
-    private func httpBody<T: ServiceEndpoint>(for endpoint: T) -> Data? {
-        guard let parameters = endpoint.postParameters else {
+    private func httpBody<T: ServiceEndpoint>(for request: T) -> Data? {
+        guard let parameters = request.postParameters else {
             return nil
         }
         
@@ -110,40 +96,19 @@ class URLRequestFactory {
         
         for parameter in parameters {
             guard let param = nameValue(for: "\(parameter)") else {
-                print("ERROR: Failed to extract POST key/value parameter for \(parameter). It must be an `enum` case with a single associated value.")
+                print("Failed to extract POST key/value parameter for \(parameter). It must be an `enum` case with a single associated value.")
                 return nil
             }
-            
+
             dict[param.name] = param.value
         }
         
-        switch endpoint.httpBodyEncodingStrategy {
+        switch request.httpBodyEncodingStrategy {
         case .json:
             return dict.asJson
         case .keyValue:
             return dict.asKeyValuePairs
         }
-    }
-    
-    func interpolatePathParameters<T: ServiceEndpoint>(urlString: String, using endpoint: T) -> String {
-        guard let parameters = endpoint.pathParameters else {
-            return urlString
-        }
-        
-        var urlString = urlString
-        for parameter in parameters {
-            guard let param = nameValue(for: "\(parameter)") else {
-                print("ERROR: Failed to extract path parameter key/value for \(parameter). It must be an `enum` case with a single associated value.")
-                return urlString
-            }
-            // TODO: Throw error if the parameter was not found in the URL.
-            guard urlString.range(of: param.name) != nil else {
-                print("ERROR: Failed to interpolate parameter \(param.name) as it was not found in the URL string. Either remove the path parameter or add it to the `ServiceEndpoint` URL string.")
-                return urlString
-            }
-            urlString = urlString.replacingOccurrences(of: "%{\(param.name)}", with: param.value)
-        }
-        return urlString
     }
 }
 
@@ -159,11 +124,5 @@ private extension Dictionary where Key == String {
             return "\(key)=\(value)"
         }
         return kv.joined(separator: "&").data(using: .utf8)
-    }
-}
-
-private extension String {
-    func capitalizedFirstLetter() -> String {
-        return prefix(1).uppercased() + lowercased().dropFirst()
     }
 }

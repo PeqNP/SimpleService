@@ -18,7 +18,13 @@ struct LoginResponse {
     let lastName: String
 }
 
-class LoginService: Service {
+class LoginService: LoginProvider {
+    
+    let service: Service
+    
+    init(service: Service) {
+        self.service = service
+    }
     
     func login(username: String, password: String) -> Future<LoginResponse, LoginServiceError> {
         let endpoint = LoginEndpoint(
@@ -37,7 +43,7 @@ class LoginService: Service {
                 .password(password)
             ]
         )
-        return request(endpoint)
+        return service.request(endpoint)
             .map { response -> LoginResponse in
                 return LoginResponse(firstName: "Leonardo", lastName: "da Vinci")
             }

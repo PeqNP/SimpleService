@@ -11,10 +11,6 @@ import Foundation
 class ServicePluginProvider {
     private var plugins: [ServicePlugin] = []
     
-    init(plugins: [ServicePlugin] = []) {
-        self.plugins = plugins
-    }
-    
     /**
      Register a plugin.
      

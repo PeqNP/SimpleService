@@ -28,13 +28,17 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         // This could be injected into the `ViewController` using `Swinject` or your favorite dependency injection library.
-        let servicePluginProvider = ServicePluginProvider(plugins: [TraceContextServicePlugin()])
-        let alamofireRequester = AlamofireServiceRequester()
-        let informationalRequester = InformationalServiceRequester()
+        let servicePluginProvider = ServicePluginProvider()
+        servicePluginProvider.registerPlugins( [TraceContextServicePlugin()])
+        
+        // To make live requests, toggle the `requester`.
+//        let requester = AlamofireServiceRequester()
+        let requester = InformationalServiceRequester()
         
         // Services that we can interact with
-        loginService = LoginService(environment: .prod, requester: informationalRequester, pluginProvider: servicePluginProvider)
-        productProvider = ProjectService(environment: .prod, requester: alamofireRequester, pluginProvider: servicePluginProvider)
+        let service = Service(environment: .prod, requester: requester)
+        loginService = LoginService(service: service)
+        productProvider = ProjectService(service: service)
         
         // Attempt to login to the server. Please feel free to put a breakpoint in `Service`, or the `URLRequestFactory`, to see how this request is created. The `LoginService` illustrates how all key/value pairs are sent to the server.
         loginService?.login(username: "username", password: "password").onComplete { (result) in
@@ -42,19 +46,16 @@ class ViewController: UIViewController {
             case .success(let user):
                 print(user)
             case .failure(let error):
-                print(error)
+                print("Failed to login because: \(error)")
             }
         }
-        
-        // Remove this to see an example of a live request/response
-        return Void()
         
         productProvider?.projects(offset: nil, limit: 10).onComplete { (result) in
             switch result {
             case .success(let products):
                 print(products)
             case .failure(let error):
-                print(error)
+                print("Failed to load projects because: \(error)")
             }
         }
     }

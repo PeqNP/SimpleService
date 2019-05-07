@@ -12,7 +12,7 @@ import Foundation
 
 extension ServiceResult {
     static func make(from response: DataResponse<Any>) -> ServiceResult {
-        return ServiceResult(data: response.data, error: response.error)
+        return ServiceResult(statusCode: response.response?.statusCode, data: response.data, error: response.error)
     }
 }
 

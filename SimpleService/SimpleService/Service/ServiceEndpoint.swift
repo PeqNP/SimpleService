@@ -9,12 +9,8 @@
 import Foundation
 
 enum ServiceRequestType {
-    case delete  // Deletes a resource
-    case get     // Requests representation of a resource
-    case head    // Identical to GET but w/o payload
-    case patch   // Apply partial modifications to a resource
-    case post    // Submit entity to a resource
-    case put     // Replaces current represenation of a resource
+    case get
+    case post
 }
 
 typealias Endpoints = [Environment: String]
@@ -30,8 +26,6 @@ enum HTTPBodyEncodingStrategy {
 /**
  Notes:
  `Header`, `PathParameter`, `GetParameter`, and `PostParameter` must be enums with a single associated value for every case.
- 
- When a `ServiceEndpoint` has path parameters it is required that all path parameters are provided. If not, the `Service` will throw an `Error`.
  */
 protocol ServiceEndpoint {
     associatedtype ResponseType: Decodable
