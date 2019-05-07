@@ -173,11 +173,7 @@
 			children = (
 				0754B65621FFBBFD00E2DECD /* Domain */,
 				0754B64221FFBACC00E2DECD /* Service */,
-				078681FB221B45A200B0EA37 /* ServicePlugins */,
-				078681FE221B4B4800B0EA37 /* ServiceRequesters */,
-				0754B62221FFB9CA00E2DECD /* AppDelegate.swift */,
-				0754B62421FFB9CA00E2DECD /* ViewController.swift */,
-				0754B62621FFB9CA00E2DECD /* Main.storyboard */,
+				079AD1EE228231D600463D15 /* App */,
 				0754B62921FFB9D200E2DECD /* Assets.xcassets */,
 				0754B62B21FFB9D200E2DECD /* LaunchScreen.storyboard */,
 				0754B62E21FFB9D200E2DECD /* Info.plist */,
@@ -249,6 +245,18 @@
 				078681FF221B4B6C00B0EA37 /* InformationalServiceRequester.swift */,
 			);
 			path = ServiceRequesters;
+			sourceTree = "<group>";
+		};
+		079AD1EE228231D600463D15 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				078681FB221B45A200B0EA37 /* ServicePlugins */,
+				078681FE221B4B4800B0EA37 /* ServiceRequesters */,
+				0754B62221FFB9CA00E2DECD /* AppDelegate.swift */,
+				0754B62421FFB9CA00E2DECD /* ViewController.swift */,
+				0754B62621FFB9CA00E2DECD /* Main.storyboard */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 		07C6C726221DEDCF00E79C43 /* SimpleServiceTests */ = {
