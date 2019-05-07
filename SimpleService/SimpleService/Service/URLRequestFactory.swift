@@ -1,5 +1,5 @@
 /**
- Provides definition of a request made to a service.
+ `URLRequest` factory
  
  License: MIT
  
