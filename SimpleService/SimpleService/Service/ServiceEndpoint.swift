@@ -35,7 +35,7 @@ protocol ServiceEndpoint {
     associatedtype Header
     associatedtype PathParameter
     associatedtype QueryParameter
-    associatedtype PostParameter
+    associatedtype PostBody
     
     var type: ServiceRequestType { get }
     var plugins: [ServicePluginKey]? { get }
@@ -43,7 +43,18 @@ protocol ServiceEndpoint {
     var headers: [Header]? { get }
     var pathParameters: [PathParameter]? { get }
     var queryParameters: [QueryParameter]? { get }
-    var postParameters: [PostParameter]? { get }
+    
+    /**
+     The post body will be encoded differently depending on the `HTTPBodyEncodingStrategy`.
+     
+     When the value type is:
+     `Data` - use only case `.data`
+     `[String: Any]` - use cases `.json` or `.keyValue`. `Any` must be any value that can be transformed into a `String`.
+     `Encodable` - use only case `.json` or `.keyValue`. In the case of `.keyValue`, the `Encodable` object must only be one level deep.
+     
+     The default value is `.json`
+     */
+    var postBody: PostBody? { get }
     var httpBodyEncodingStrategy: HTTPBodyEncodingStrategy { get }
 }
 
@@ -61,7 +72,7 @@ extension ServiceEndpoint {
     var queryParameters: [QueryParameter]? {
         return nil
     }
-    var postParameters: [PostParameter]? {
+    var postBody: PostBody? {
         return nil
     }
     var httpBodyEncodingStrategy: HTTPBodyEncodingStrategy {

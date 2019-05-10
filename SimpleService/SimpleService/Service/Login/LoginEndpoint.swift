@@ -38,11 +38,12 @@ struct LoginEndpoint: ServiceEndpoint {
         // The name of the `case` is the name of the corresponding w/ no transformation. Therefore, `case funding(Bool)` will be represented as `format=json[&...N]` when sent to the server.
         case format(String)
     }
+    // Similar to `PathParameter` and `QueryParameter`, it is possible to allow the `PostBody` to be used as a key/value pair for `.keyValue` and `.json` encoding types.
     enum PostParameter {
-        // This works the same as a `QueryParameter` where the `case` name is the value of the key w/ no transformation.
         case username(String)
         case password(String)
     }
+    typealias PostBody = [PostParameter]
     
     var type: ServiceRequestType = .post
     var endpoints: Endpoints = [
@@ -52,12 +53,12 @@ struct LoginEndpoint: ServiceEndpoint {
     var headers: [Header]?
     var pathParameters: [PathParameter]?
     var queryParameters: [QueryParameter]?
-    var postParameters: [PostParameter]?
+    var postBody: PostBody?
     
-    init(headers: [Header], pathParameters: [PathParameter], queryParameters: [QueryParameter], postParameters: [PostParameter]) {
+    init(headers: [Header], pathParameters: [PathParameter], queryParameters: [QueryParameter], postBody: PostBody?) {
         self.headers = headers
         self.pathParameters = pathParameters
         self.queryParameters = queryParameters
-        self.postParameters = postParameters
+        self.postBody = postBody
     }
 }

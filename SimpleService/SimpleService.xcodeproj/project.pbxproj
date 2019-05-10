@@ -32,6 +32,10 @@
 		0754B65821FFBC0B00E2DECD /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0754B65721FFBC0B00E2DECD /* Project.swift */; };
 		0754B65A21FFBC2700E2DECD /* ProjectSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0754B65921FFBC2700E2DECD /* ProjectSource.swift */; };
 		0754B65C21FFBCA800E2DECD /* AlamofireServiceRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0754B65B21FFBCA800E2DECD /* AlamofireServiceRequester.swift */; };
+		076A8C42228636310075B56C /* TestApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076A8C41228636310075B56C /* TestApplication.swift */; };
+		076A8C44228636B10075B56C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076A8C43228636B10075B56C /* main.swift */; };
+		076A8C4622863D630075B56C /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076A8C4522863D630075B56C /* Application.swift */; };
+		076A8C4822863E050075B56C /* TestAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076A8C4722863E050075B56C /* TestAppDelegate.swift */; };
 		07862CAA220B944000C666E7 /* ServicePluginKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07862CA9220B944000C666E7 /* ServicePluginKey.swift */; };
 		07862CAC220BB92000C666E7 /* ServicePluginProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07862CAB220BB92000C666E7 /* ServicePluginProvider.swift */; };
 		078681F8221B3D7200B0EA37 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078681F7221B3D7200B0EA37 /* LoginService.swift */; };
@@ -41,6 +45,7 @@
 		079AD1E922822B4900463D15 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079AD1E822822B4900463D15 /* User.swift */; };
 		079AD1EB22822E2000463D15 /* LoginEndpoint+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079AD1EA22822E2000463D15 /* LoginEndpoint+Helper.swift */; };
 		079AD1ED22822EFC00463D15 /* ServiceEndpoint+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079AD1EC22822EFC00463D15 /* ServiceEndpoint+Helper.swift */; };
+		07A1B97922861A3F0093D257 /* URLRequestFactorySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A1B97822861A3F0093D257 /* URLRequestFactorySpec.swift */; };
 		07C6C731221DEDF000E79C43 /* LoginServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C6C730221DEDF000E79C43 /* LoginServiceSpec.swift */; };
 		CAAA56E7F4467C973120D59D /* Pods_SimpleService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 936DEC3385F201FAE731D879 /* Pods_SimpleService.framework */; };
 		E05BCBB7CB7C76E3D54ECD47 /* Pods_SimpleServiceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7806193BD4C3787F81097187 /* Pods_SimpleServiceTests.framework */; };
@@ -84,6 +89,10 @@
 		0754B65721FFBC0B00E2DECD /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		0754B65921FFBC2700E2DECD /* ProjectSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSource.swift; sourceTree = "<group>"; };
 		0754B65B21FFBCA800E2DECD /* AlamofireServiceRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireServiceRequester.swift; sourceTree = "<group>"; };
+		076A8C41228636310075B56C /* TestApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestApplication.swift; sourceTree = "<group>"; };
+		076A8C43228636B10075B56C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		076A8C4522863D630075B56C /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
+		076A8C4722863E050075B56C /* TestAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAppDelegate.swift; sourceTree = "<group>"; };
 		07862CA9220B944000C666E7 /* ServicePluginKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicePluginKey.swift; sourceTree = "<group>"; };
 		07862CAB220BB92000C666E7 /* ServicePluginProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicePluginProvider.swift; sourceTree = "<group>"; };
 		078681F7221B3D7200B0EA37 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
@@ -93,6 +102,7 @@
 		079AD1E822822B4900463D15 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		079AD1EA22822E2000463D15 /* LoginEndpoint+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginEndpoint+Helper.swift"; sourceTree = "<group>"; };
 		079AD1EC22822EFC00463D15 /* ServiceEndpoint+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ServiceEndpoint+Helper.swift"; sourceTree = "<group>"; };
+		07A1B97822861A3F0093D257 /* URLRequestFactorySpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestFactorySpec.swift; sourceTree = "<group>"; };
 		07C6C725221DEDCF00E79C43 /* SimpleServiceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleServiceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		07C6C729221DEDCF00E79C43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07C6C730221DEDF000E79C43 /* LoginServiceSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginServiceSpec.swift; sourceTree = "<group>"; };
@@ -173,10 +183,12 @@
 			children = (
 				0754B65621FFBBFD00E2DECD /* Domain */,
 				0754B64221FFBACC00E2DECD /* Service */,
+				07E492E8228635E300B5D8E1 /* Test */,
 				079AD1EE228231D600463D15 /* App */,
 				0754B62921FFB9D200E2DECD /* Assets.xcassets */,
 				0754B62B21FFB9D200E2DECD /* LaunchScreen.storyboard */,
 				0754B62E21FFB9D200E2DECD /* Info.plist */,
+				076A8C43228636B10075B56C /* main.swift */,
 			);
 			path = SimpleService;
 			sourceTree = "<group>";
@@ -252,6 +264,7 @@
 			children = (
 				078681FB221B45A200B0EA37 /* ServicePlugins */,
 				078681FE221B4B4800B0EA37 /* ServiceRequesters */,
+				076A8C4522863D630075B56C /* Application.swift */,
 				0754B62221FFB9CA00E2DECD /* AppDelegate.swift */,
 				0754B62421FFB9CA00E2DECD /* ViewController.swift */,
 				0754B62621FFB9CA00E2DECD /* Main.storyboard */,
@@ -274,8 +287,18 @@
 			isa = PBXGroup;
 			children = (
 				07C6C730221DEDF000E79C43 /* LoginServiceSpec.swift */,
+				07A1B97822861A3F0093D257 /* URLRequestFactorySpec.swift */,
 			);
 			path = Spec;
+			sourceTree = "<group>";
+		};
+		07E492E8228635E300B5D8E1 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				076A8C41228636310075B56C /* TestApplication.swift */,
+				076A8C4722863E050075B56C /* TestAppDelegate.swift */,
+			);
+			path = Test;
 			sourceTree = "<group>";
 		};
 		D0BA5BBAC5EE5326357A338C /* Frameworks */ = {
@@ -507,19 +530,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				076A8C4822863E050075B56C /* TestAppDelegate.swift in Sources */,
 				0754B64C21FFBB0F00E2DECD /* ServicePlugin.swift in Sources */,
 				07862CAC220BB92000C666E7 /* ServicePluginProvider.swift in Sources */,
 				07868200221B4B6C00B0EA37 /* InformationalServiceRequester.swift in Sources */,
 				0754B65521FFBB6100E2DECD /* ProjectResponse.swift in Sources */,
 				0754B65821FFBC0B00E2DECD /* Project.swift in Sources */,
 				0754B65C21FFBCA800E2DECD /* AlamofireServiceRequester.swift in Sources */,
+				076A8C42228636310075B56C /* TestApplication.swift in Sources */,
 				0754B64D21FFBB0F00E2DECD /* Service.swift in Sources */,
 				0754B62521FFB9CA00E2DECD /* ViewController.swift in Sources */,
+				076A8C4622863D630075B56C /* Application.swift in Sources */,
 				0754B64421FFBAD700E2DECD /* Environment.swift in Sources */,
 				07152BDD22810DFB00FCEDBB /* ProjectProvider.swift in Sources */,
 				07152BD9228105C100FCEDBB /* BrightFutures+Upstart.swift in Sources */,
 				0754B64B21FFBB0F00E2DECD /* ServiceEndpoint.swift in Sources */,
 				078681F8221B3D7200B0EA37 /* LoginService.swift in Sources */,
+				076A8C44228636B10075B56C /* main.swift in Sources */,
 				07152BDB2281075E00FCEDBB /* LoginProvider.swift in Sources */,
 				0754B65421FFBB6100E2DECD /* ProjectService.swift in Sources */,
 				0754B64A21FFBB0F00E2DECD /* ServiceRequester.swift in Sources */,
@@ -541,6 +568,7 @@
 				07152BE9228229A300FCEDBB /* FakeService.swift in Sources */,
 				079AD1EB22822E2000463D15 /* LoginEndpoint+Helper.swift in Sources */,
 				07152BE522821C4A00FCEDBB /* User+Helper.swift in Sources */,
+				07A1B97922861A3F0093D257 /* URLRequestFactorySpec.swift in Sources */,
 				07C6C731221DEDF000E79C43 /* LoginServiceSpec.swift in Sources */,
 				079AD1ED22822EFC00463D15 /* ServiceEndpoint+Helper.swift in Sources */,
 				07152BE022821BF700FCEDBB /* FakeServiceRequester.swift in Sources */,

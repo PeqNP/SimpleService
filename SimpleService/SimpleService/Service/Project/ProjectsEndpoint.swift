@@ -67,8 +67,8 @@ struct ProjectsEndpoint: ServiceEndpoint {
         case offset(Int)
         case limit(Int)
     }
-    enum PostParameter { }
-        
+    typealias PostBody = Any?
+
     var type: ServiceRequestType = .get
     var endpoints: Endpoints = [
         .prod: "https://collect.backit.com/projects"

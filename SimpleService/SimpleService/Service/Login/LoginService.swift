@@ -29,7 +29,7 @@ class LoginService: LoginProvider {
             queryParameters: [
                 .format("json")
             ],
-            postParameters: [
+            postBody: [
                 .username(username),
                 .password(password)
             ]

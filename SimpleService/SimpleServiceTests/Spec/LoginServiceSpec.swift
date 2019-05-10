@@ -47,7 +47,7 @@ class LoginServiceSpec: QuickSpec {
                         queryParameters: [
                             .format("json")
                         ],
-                        postParameters: [
+                        postBody: [
                             .username("username"),
                             .password("password")
                         ]
