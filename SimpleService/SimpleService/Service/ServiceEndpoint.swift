@@ -21,6 +21,9 @@ enum HTTPBodyEncodingStrategy {
     
     /// Encode data as k1=v1[&k2=v2...]
     case keyValue
+    
+    /// Data (images, binaries, files, etc.)
+    case data
 }
 
 /**

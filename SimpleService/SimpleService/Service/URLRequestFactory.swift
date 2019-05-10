@@ -108,6 +108,10 @@ class URLRequestFactory {
             return nil
         }
         
+        if request.httpBodyEncodingStrategy == .data {
+            return request.postParameters
+        }
+        
         var dict = [String: String]()
         
         for parameter in parameters {
@@ -124,6 +128,8 @@ class URLRequestFactory {
             return dict.asJson
         case .keyValue:
             return dict.asKeyValuePairs
+        case .data:
+            break
         }
     }
 }
