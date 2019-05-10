@@ -134,7 +134,7 @@ class URLRequestFactorySpec: QuickSpec {
                     var endpoints: Endpoints = [
                         .prod: "https://www.example.com/"
                     ]
-                    var postBody: PostBody
+                    var postBody: PostBody?
                     var httpBodyEncodingStrategy = HTTPBodyEncodingStrategy.json
                     
                     init(postBody: PostBody) {
@@ -148,7 +148,7 @@ class URLRequestFactorySpec: QuickSpec {
                     urlRequest = try? subject.make(from: endpoint, in: .prod)
                 }
                 
-                fit("should have encoded the data correctly") {
+                it("should have encoded the data correctly") {
                     let httpBody: Data = FakeEndpoint.PostBody(username: "Eric").asJson!
                     expect(urlRequest.httpBody).to(equal(httpBody))
                 }
@@ -160,19 +160,20 @@ class URLRequestFactorySpec: QuickSpec {
                     enum Header { }
                     enum PathParameter { }
                     enum QueryParameter { }
-                    enum PostBody {
+                    enum PostParameter {
                         case username(String)
                         case password(String)
                     }
+                    typealias PostBody = [PostParameter]
                     
                     var type: ServiceRequestType = .post
                     var endpoints: Endpoints = [
                         .prod: "https://www.example.com/"
                     ]
-                    var postBody: [PostBody]
+                    var postBody: PostBody?
                     var httpBodyEncodingStrategy = HTTPBodyEncodingStrategy.keyValue
                     
-                    init(postBody: [PostBody]) {
+                    init(postBody: PostBody) {
                         self.postBody = postBody
                     }
                 }
