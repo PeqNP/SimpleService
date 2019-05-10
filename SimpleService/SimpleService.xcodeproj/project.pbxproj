@@ -355,9 +355,11 @@
 				TargetAttributes = {
 					0754B61E21FFB9CA00E2DECD = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 					07C6C724221DEDCF00E79C43 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = 0754B61E21FFB9CA00E2DECD;
 					};
 				};
@@ -707,7 +709,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.upstartillustration.SimpleService;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -726,7 +728,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.upstartillustration.SimpleService;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -746,7 +748,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.upstartillustration.SimpleServiceTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SimpleService.app/SimpleService";
 			};
@@ -767,7 +769,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.upstartillustration.SimpleServiceTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SimpleService.app/SimpleService";
 			};
