@@ -108,8 +108,9 @@ class URLRequestFactory {
             return nil
         }
         
+        // TODO: The `PostParameter` will need to be changed to something else or another property may need to be added that provides the `Data`.
         if request.httpBodyEncodingStrategy == .data {
-            return request.postParameters
+            return nil
         }
         
         var dict = [String: String]()
@@ -129,7 +130,7 @@ class URLRequestFactory {
         case .keyValue:
             return dict.asKeyValuePairs
         case .data:
-            break
+            return nil
         }
     }
 }
