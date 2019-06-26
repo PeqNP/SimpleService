@@ -40,7 +40,7 @@ class ProjectService: ProjectProvider {
                 return ProjectResponse(from: response, offset: nextOffset)
             }
             .mapError { error -> ProjectProviderError in
-                return .failedToLoadProject
+                return .generic(error)
             }
     }
 }

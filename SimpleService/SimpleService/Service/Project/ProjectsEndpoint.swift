@@ -1,9 +1,6 @@
 /**
- Represents the endpoint which provides projects from the Backit public API.
- 
- License: MIT
- 
- Copyright © 2019 Upstart Illustration LLC. All rights reserved.
+ *
+ * Copyright © 2019 Backit Inc. All rights reserved.
  */
 
 import Foundation
@@ -67,8 +64,8 @@ struct ProjectsEndpoint: ServiceEndpoint {
         case offset(Int)
         case limit(Int)
     }
-    typealias PostBody = Any?
-
+    enum PostBody { }
+    
     var type: ServiceRequestType = .get
     var endpoints: Endpoints = [
         .prod: "https://collect.backit.com/projects"

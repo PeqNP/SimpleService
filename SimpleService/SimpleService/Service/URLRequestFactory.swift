@@ -54,7 +54,7 @@ class URLRequestFactory {
         
         return pathParameters.reduce(urlString) { (result, parameter) -> String in
             guard let param = nameValue(for: "\(parameter)") else {
-                print("Failed to extract key/value path parameter for \(parameter). It must be an `enum` case with a single associated value.")
+                log.e("Failed to extract key/value path parameter for \(parameter). It must be an `enum` case with a single associated value.")
                 return ""
             }
             return result.replacingOccurrences(of: "{\(param.name)}", with: param.value)
@@ -65,11 +65,11 @@ class URLRequestFactory {
         guard let headers = request.headers else {
             return nil
         }
-
+        
         var headerFields = [String: String]()
         for header in headers {
             guard let param = nameValue(for: "\(header)") else {
-                print("Failed to extract key/value header parameter for \(header). It must be an `enum` case with a single associated value.")
+                log.e("Failed to extract key/value header parameter for \(header). It must be an `enum` case with a single associated value.")
                 return nil
             }
             headerFields[param.name] = param.value
@@ -85,7 +85,7 @@ class URLRequestFactory {
         var items = [URLQueryItem]()
         for parameter in parameters {
             guard let param = nameValue(for: "\(parameter)") else {
-                print("Failed to extract key/value GET parameter for \(parameter). It must be an `enum` case with a single associated value.")
+                log.e("Failed to extract key/value GET parameter for \(parameter). It must be an `enum` case with a single associated value.")
                 return nil
             }
             
@@ -115,13 +115,13 @@ class URLRequestFactory {
             case .json:
                 return encodable.asJson
             case .keyValue:
-                // WARN: Not supported
+                log.w("Encoding POST w/ `Encodable` key-value parameters is not yet supported")
                 return nil
             case .data:
                 return nil
             }
         }
-
+        
         // Attempt to encode similar to `PathParameter` and `QueryParameter`.
         // `Any` in this case must be an `enum`.
         guard let parameters = request.postBody as? [Any] else {
@@ -133,7 +133,7 @@ class URLRequestFactory {
         
         for parameter in parameters {
             guard let param = nameValue(for: "\(parameter)") else {
-                print("Failed to extract POST key/value parameter for \(parameter). It must be an `enum` case with a single associated value.")
+                log.e("Failed to extract POST key/value parameter for \(parameter). It must be an `enum` case with a single associated value.")
                 return nil
             }
             
@@ -151,15 +151,6 @@ class URLRequestFactory {
     }
 }
 
-extension Encodable {
-    var asJson: Data? {
-        if self is [String: Any] || self is [[String: Any]] {
-            return try? JSONSerialization.data(withJSONObject: self, options: [])
-        }
-        return try? JSONEncoder().encode(self)
-    }
-}
-
 extension Dictionary where Key == String {
     var asKeyValuePairs: Data? {
         let kv: [String] = self.map { (arg) -> String in
@@ -167,5 +158,14 @@ extension Dictionary where Key == String {
             return "\(key)=\(value)"
         }
         return kv.joined(separator: "&").data(using: .utf8)
+    }
+}
+
+extension Encodable {
+    var asJson: Data? {
+        if self is [String: Any] || self is [[String: Any]] {
+            return try? JSONSerialization.data(withJSONObject: self, options: [])
+        }
+        return try? JSONEncoder().encode(self)
     }
 }

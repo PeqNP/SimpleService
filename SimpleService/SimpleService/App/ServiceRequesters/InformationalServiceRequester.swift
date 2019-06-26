@@ -12,7 +12,7 @@ import BrightFutures
 import Foundation
 
 enum InformationalError: Error {
-    case emptyResponse
+    case requestIgnored
 }
 
 class InformationalServiceRequester: ServiceRequester {
@@ -25,6 +25,6 @@ class InformationalServiceRequester: ServiceRequester {
         else {
             print("  Body: nil")
         }
-        callback(ServiceResult(statusCode: 0, data: nil, error: InformationalError.emptyResponse))
+        callback(ServiceResult(statusCode: 0, data: nil, error: InformationalError.requestIgnored))
     }
 }

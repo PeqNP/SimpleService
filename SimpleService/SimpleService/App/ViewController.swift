@@ -21,7 +21,7 @@ class ViewController: UIViewController {
         
         // This could be injected into the `ViewController` using `Swinject` or your favorite dependency injection library.
         let servicePluginProvider = ServicePluginProvider()
-        servicePluginProvider.registerPlugins( [TraceContextServicePlugin()])
+        servicePluginProvider.registerPlugins([TraceContextServicePlugin()])
         
         // To make live requests, toggle the `requester`.
 //        let requester = AlamofireServiceRequester()

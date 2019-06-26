@@ -9,7 +9,7 @@ import BrightFutures
 import Foundation
 
 enum ProjectProviderError: Error {
-    case failedToLoadProject
+    case generic(Error)
 }
 
 protocol ProjectProvider {
