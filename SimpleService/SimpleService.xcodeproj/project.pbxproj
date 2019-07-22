@@ -48,6 +48,7 @@
 		079AD1ED22822EFC00463D15 /* ServiceEndpoint+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079AD1EC22822EFC00463D15 /* ServiceEndpoint+Helper.swift */; };
 		07A1B97922861A3F0093D257 /* URLRequestFactorySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A1B97822861A3F0093D257 /* URLRequestFactorySpec.swift */; };
 		07C6C731221DEDF000E79C43 /* LoginServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C6C730221DEDF000E79C43 /* LoginServiceSpec.swift */; };
+		07C9C4FD22E63F9D005E8BD4 /* Encodable+Upstart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C9C4FC22E63F9D005E8BD4 /* Encodable+Upstart.swift */; };
 		CAAA56E7F4467C973120D59D /* Pods_SimpleService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 936DEC3385F201FAE731D879 /* Pods_SimpleService.framework */; };
 		E05BCBB7CB7C76E3D54ECD47 /* Pods_SimpleServiceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7806193BD4C3787F81097187 /* Pods_SimpleServiceTests.framework */; };
 /* End PBXBuildFile section */
@@ -108,6 +109,7 @@
 		07C6C725221DEDCF00E79C43 /* SimpleServiceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleServiceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		07C6C729221DEDCF00E79C43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07C6C730221DEDF000E79C43 /* LoginServiceSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginServiceSpec.swift; sourceTree = "<group>"; };
+		07C9C4FC22E63F9D005E8BD4 /* Encodable+Upstart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+Upstart.swift"; sourceTree = "<group>"; };
 		0BB66F61E3F61523B0B14478 /* Pods-SimpleService.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleService.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleService/Pods-SimpleService.release.xcconfig"; sourceTree = "<group>"; };
 		186191DD423C46806667624F /* Pods_SimpleServiceUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleServiceUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BEB57ECFDCCCEFF6FFEE7C6 /* Pods-SimpleServiceUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleServiceUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleServiceUITests/Pods-SimpleServiceUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 				078681F6221B3D5E00B0EA37 /* Login */,
 				0754B64F21FFBB2700E2DECD /* Project */,
 				07152BD8228105C100FCEDBB /* BrightFutures+Upstart.swift */,
+				07C9C4FC22E63F9D005E8BD4 /* Encodable+Upstart.swift */,
 				0754B64321FFBAD700E2DECD /* Environment.swift */,
 				0716EA3522C3D5F1002D259E /* Logger.swift */,
 				0754B64821FFBB0F00E2DECD /* Service.swift */,
@@ -544,6 +547,7 @@
 				0754B64D21FFBB0F00E2DECD /* Service.swift in Sources */,
 				0754B62521FFB9CA00E2DECD /* ViewController.swift in Sources */,
 				076A8C4622863D630075B56C /* Application.swift in Sources */,
+				07C9C4FD22E63F9D005E8BD4 /* Encodable+Upstart.swift in Sources */,
 				0754B64421FFBAD700E2DECD /* Environment.swift in Sources */,
 				0716EA3622C3D5F1002D259E /* Logger.swift in Sources */,
 				07152BDD22810DFB00FCEDBB /* ProjectProvider.swift in Sources */,

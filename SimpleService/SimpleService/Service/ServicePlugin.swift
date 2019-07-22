@@ -13,6 +13,7 @@ enum ServicePluginError: Error {
     case failedToLogin
     case retryRequest
     case strongSelf
+    case requestFailed
 }
 
 protocol ServicePlugin {
@@ -20,5 +21,5 @@ protocol ServicePlugin {
     
     func willSendRequest(_ request: URLRequest) -> Future<URLRequest, ServicePluginError>
     func didSendRequest(_ request: URLRequest)
-    func didReceiveResponse(_ response: ServiceResult) -> Future<ServiceResult, ServicePluginError>
+    func didReceiveResponse(_ response: ServiceResult, history: RequestHistory) -> Future<ServiceResult, ServicePluginError>
 }

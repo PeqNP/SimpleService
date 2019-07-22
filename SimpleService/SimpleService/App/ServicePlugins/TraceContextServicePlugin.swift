@@ -27,8 +27,7 @@ class TraceContextServicePlugin: ServicePlugin {
         // Do something with the request. Maybe log it to your favorite metrics provider?
     }
     
-    func didReceiveResponse(_ response: ServiceResult) -> Future<ServiceResult, ServicePluginError> {
-        // This gives you a change to modify the result and return a new result in its place.
+    func didReceiveResponse(_ response: ServiceResult, history: RequestHistory) -> Future<ServiceResult, ServicePluginError> {
         return Future(value: response)
     }
 }

@@ -25,21 +25,21 @@ struct LoginEndpoint: ServiceEndpoint {
         ]
     }
     
-    enum Header {
+    enum Header: ServiceParameter {
         // All headers are camelcased with underscores replaced with hyphens. Thes will turn into `Secret-Key`.
         case secret_key(String)
     }
-    enum PathParameter {
+    enum PathParameter: ServiceParameter {
         // The `case` name must be contained within the endpoint URL string w/ the same name in the following format: `{sessionid}`.
         case sessionid(String)
         case version(String)
     }
-    enum QueryParameter {
+    enum QueryParameter: ServiceParameter {
         // The name of the `case` is the name of the corresponding w/ no transformation. Therefore, `case funding(Bool)` will be represented as `format=json[&...N]` when sent to the server.
         case format(String)
     }
     // Similar to `PathParameter` and `QueryParameter`, it is possible to allow the `PostBody` to be used as a key/value pair for `.keyValue` and `.json` encoding types.
-    enum PostParameter {
+    enum PostParameter: ServiceParameter {
         case username(String)
         case password(String)
     }

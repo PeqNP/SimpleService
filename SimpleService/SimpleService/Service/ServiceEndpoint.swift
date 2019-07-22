@@ -9,11 +9,16 @@
 import Foundation
 
 enum ServiceRequestType {
+    case delete
     case get
+    case options
+    case patch
     case post
+    case put
 }
 
 typealias Endpoints = [Environment: String]
+typealias EndpointKey = String
 
 enum HTTPBodyEncodingStrategy {
     /// Encode data as JSON object
@@ -27,6 +32,26 @@ enum HTTPBodyEncodingStrategy {
 }
 
 /**
+ Provides a mechansim where parameters defined as `enum` cases can have their associated values returned.
+ */
+protocol ServiceParameter {
+    
+}
+
+extension ServiceParameter {
+    var param: (name: String, value: Any)? {
+        let mirror = Mirror(reflecting: self)
+        guard let child = mirror.children.first else {
+            return nil
+        }
+        guard let name = child.label else {
+            return nil
+        }
+        return (name, child.value)
+    }
+}
+
+/**
  Notes:
  `Header`, `PathParameter`, `GetParameter`, and `PostParameter` must be enums with a single associated value for every case.
  */
@@ -37,6 +62,8 @@ protocol ServiceEndpoint {
     associatedtype QueryParameter
     associatedtype PostBody
     
+    static var key: EndpointKey { get }
+    var key: EndpointKey { get }
     var type: ServiceRequestType { get }
     var plugins: [ServicePluginKey]? { get }
     var endpoints: Endpoints { get }
@@ -56,10 +83,18 @@ protocol ServiceEndpoint {
      */
     var postBody: PostBody? { get }
     var httpBodyEncodingStrategy: HTTPBodyEncodingStrategy { get }
+    
+    var decoder: ((Data?) -> ResponseType)? { get }
 }
 
 /// Default implementations
 extension ServiceEndpoint {
+    static var key: EndpointKey {
+        return String(describing: self)
+    }
+    var key: EndpointKey {
+        return Self.key
+    }
     var plugins: [ServicePluginKey]? {
         return nil
     }
@@ -77,5 +112,8 @@ extension ServiceEndpoint {
     }
     var httpBodyEncodingStrategy: HTTPBodyEncodingStrategy {
         return .json
+    }
+    var decoder: ((Data?) -> ResponseType)? {
+        return nil
     }
 }

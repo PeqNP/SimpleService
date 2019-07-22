@@ -55,7 +55,7 @@ struct ProjectsEndpoint: ServiceEndpoint {
     
     enum Header { }
     enum PathParameter { }
-    enum QueryParameter {
+    enum QueryParameter: ServiceParameter {
         case funding(Bool)
         case backerCountMin(Int)
         case country(String)
